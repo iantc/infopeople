@@ -21,7 +21,8 @@
         <?php if ($logo): ?><img src="<?php print $logo ?>" /><?php endif ?>
         <?php print $site_name ?>
       </a>
-      <?php if ($navbar_search): ?><?php print $navbar_search ?><?php endif ?>
+      <?php print render($page['masthead']) ?>
+      <?php //if ($navbar_search): ?><?php //print $navbar_search ?><?php //endif ?>
       <?php if ($navbar_menu): ?>
 			<nav class="nav-collapse collapse" role="navigation">
         <?php print $navbar_menu ?>
