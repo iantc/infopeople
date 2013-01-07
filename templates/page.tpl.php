@@ -24,7 +24,7 @@
       <?php print render($page['masthead']) ?>
       <?php //if ($navbar_search): ?><?php //print $navbar_search ?><?php //endif ?>
       <?php if ($navbar_menu): ?>
-			<nav class="nav-collapse collapse" role="navigation">
+			<nav class="nav-collapse collapse" role="navigation" id="topnav">
         <?php print $navbar_menu ?>
       </nav>
 			<?php endif ?>

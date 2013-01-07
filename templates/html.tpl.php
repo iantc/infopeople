@@ -18,10 +18,13 @@
   <script type="text/javascript">
 	jQuery(document).ready(function(){
 	  jQuery('#toboggan-login-link').addClass('btn btn-info');
+    jQuery('#block-system-user-menu .menu').addClass('nav nav-pills');
 	  jQuery('#search-block-form').addClass('form-search');
 	  jQuery('#edit-search-block-form--2').addClass('search-query');
+    jQuery('#search-block-form #edit-actions').removeClass('form-actions');
+    jQuery('#toboggan-login #edit-actions').removeClass('form-actions');
 	  jQuery('#edit-actions--2').removeClass('form-actions');
-	  jQuery('#edit-submit--2').removeClass('btn-primary');
+    jQuery('#search-block-form .form-submit').removeClass('btn-primary');
 	});
   </script>
 </head>
