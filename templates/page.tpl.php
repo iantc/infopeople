@@ -45,16 +45,9 @@
 <!-- Header -->
 <header id="header" class="container-wrapper">
   <div class="container">
-    <?php if ($title): ?>
-    <?php print $breadcrumb ?>
-    <?php print render($title_prefix) ?>
-    <h1><?php print $title ?></h1>
-    <?php print render($title_suffix) ?>
-    <?php endif ?>
     <?php print $messages ?>
     <?php print render($page['help']) ?>
     <?php if ($tabs): ?><?php print render($tabs) ?><?php endif ?>
-    <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links) ?></ul><?php endif ?>
   </div>
 </header>
 <?php endif ?>
@@ -72,6 +65,14 @@
       <?php endif ?>
       <!-- Content -->
       <section id="content" class="span<?php print $content_cols ?>">
+        <?php if ($title): ?>
+          <?php print $breadcrumb ?>
+          <?php print render($title_prefix) ?>
+          <h1><?php print $title ?></h1>
+          <?php print render($title_suffix) ?>
+        <?php endif ?>
+        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links) ?></ul><?php endif ?>
+        <div id="social-media-links"></div>
         <?php print render($page['content']) ?>
       </section>
       <?php if ($has_sidebar_second): ?>
