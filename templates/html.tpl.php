@@ -25,6 +25,12 @@
     jQuery('#toboggan-login #edit-actions').removeClass('form-actions');
 	  jQuery('#edit-actions--2').removeClass('form-actions');
     jQuery('#search-block-form .form-submit').removeClass('btn-primary');
+    jQuery('#block-book-navigation').addClass('well');
+    jQuery('#block-book-navigation .expanded').prepend('<i class="icon-angle-down"></li> ');
+    jQuery('#block-book-navigation .collapsed').prepend('<i class="icon-angle-right"></li> ');
+    jQuery('#block-book-navigation .leaf').prepend('<i class="icon-file"></li> ');
+    jQuery('#block-system-navigation').addClass('well');
+    jQuery('#social-media-links').prepend('<div id="facebook"></div><div id="twitter"></div><div id="google"></div><div id="rssfeeds"></div>')
 	});
   </script>
 </head>
