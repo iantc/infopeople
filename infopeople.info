@@ -1,21 +1,29 @@
 name = Infopeople
 description = The Infopeople theme integrates the Twitter Bootstrap framework through the use of the Tweme theme.
 core = 7.x
-base theme  = tweme
+base theme  = zenstrap
 
 stylesheets[all][] = css/infopeople.css
 
 regions[hidden] = Hidden
 regions[masthead] = Masthead
-regions[header] = Header
-regions[help] = Help
-regions[page_top] = Page top
-regions[page_bottom] = Page bottom
-regions[highlighted] = Highlighted
 regions[featured] = Featured
 regions[content] = Content
-regions[sidebar_first] = Sidebar first
 regions[sidebar_first_affix] = Sidebar first affix
-regions[sidebar_second] = Sidebar second
 regions[sidebar_second_affix] = Sidebar second affix
-regions[footer] = Footer
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[content]        = Content
+regions[sidebar_first]  = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+
+; The page_top and page_bottom regions are hidden, which means they will not
+; show up on the blocks administration page. But they are required in order for
+; the html.tpl.php to work properly, so do not delete them.
+
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom

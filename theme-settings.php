@@ -12,12 +12,4 @@ function infopeople_form_system_theme_settings_alter(&$form, $form_state, $form_
   if (isset($form_id)) {
     return;
   }
-
-  // Create the form using Forms API
-  $form['themedev']['infopeople_rebuild_registry'] = array(
-    '#type'          => 'checkbox',
-    '#title'         => t('Rebuild theme registry on every page.'),
-    '#default_value' => theme_get_setting('infopeople_rebuild_registry'),
-    '#description'   => t('During theme development, it can be very useful to continuously <a href="!link">rebuild the theme registry</a>. WARNING: this is a huge performance penalty and must be turned off on production websites.', array('!link' => 'http://drupal.org/node/173880#theme-registry')),
-  );
 }
