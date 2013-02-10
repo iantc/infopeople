@@ -45,9 +45,8 @@
     jQuery('ul.nice-menu-down li.menuparent ul').addClass('dropdown-menu');
     jQuery('ul.nice-menu-down li.menuparent ul a b').remove();
     jQuery('#block-book-navigation .leaf').prepend('<i class="icon-file"></li> ');
-    jQuery('#block-book-navigation li a').prepend(this.prev('i'));
     jQuery('#block-system-navigation').addClass('well');
-    jQuery('#social-media-links').prepend('<div id="facebook"></div><div id="twitter"></div><div id="google"></div><div id="rssfeeds"></div>')
+    jQuery('#gplus-wrapper').appendTo('#navbar .service-links');
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
