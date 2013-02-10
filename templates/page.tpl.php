@@ -25,6 +25,9 @@
       <!--       </hgroup><!-- /#name-and-slogan -->
           <?php endif; ?>
       <?php print render($page['masthead']) ?>
+      <!-- Place this code where you want the badge to render. -->
+<div id="gplus-wrapper"><a href="https://plus.google.com/118030402011071787281?prsrc=3" rel="publisher" style="text-decoration:none;">
+<img src="/sites/all/themes/infopeople/social/google.png" alt="Google+" style="border:0;width:36px;height:36px;"/></a></div>
           <?php if ($main_menu): ?>
             <nav id="main-menu" role="navigation">
               <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
