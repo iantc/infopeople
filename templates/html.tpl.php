@@ -41,12 +41,21 @@
     jQuery('#block-book-navigation').addClass('well');
     jQuery('#block-book-navigation .expanded').prepend('<i class="icon-angle-down"></li> ');
     jQuery('#block-book-navigation .collapsed').prepend('<i class="icon-angle-right"></li> ');
+    jQuery('.book-nav-horizontal .nav a').prepend('<i class="icon-angle-right"></li> ');
     jQuery('ul.nice-menu-down li.menuparent a').append(' <b class="caret"></b>');
     jQuery('ul.nice-menu-down li.menuparent ul').addClass('dropdown-menu');
     jQuery('ul.nice-menu-down li.menuparent ul a b').remove();
     jQuery('#block-book-navigation .leaf').prepend('<i class="icon-file"></li> ');
     jQuery('#block-system-navigation').addClass('well');
     jQuery('#gplus-wrapper').appendTo('#navbar .service-links');
+    jQuery('.messages.help').addClass('alert alert-info');
+    jQuery('#user-register-form .messages.help').removeClass('alert-info').addClass('alert-warning');
+    jQuery('.form-item .description').addClass('alert alert-info');
+    jQuery('#page-tabs li a[href$="/edit"]').prepend('<i class="icon-edit"></i>  ');
+    jQuery('#page-tabs li a:contains("View")').prepend('<i class="icon-eye-open"></i>  ');
+    jQuery('#page-tabs li a:contains("Devel")').prepend('<i class="icon-beaker"></i>  ');
+    jQuery('#page-tabs li a:contains("Track")').prepend('<i class="icon-signal"></i>  ');
+    jQuery('#page-tabs li a:contains("Log")').prepend('<i class="icon-filter"></i>  ');
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
