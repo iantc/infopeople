@@ -34,21 +34,37 @@
 ?>
 <?php if ($tree || $has_links): ?>
   <div id="book-navigation-<?php print $book_id; ?>" class="book-nav-horizontal">
-    <?php print $tree; ?>
-
-    <?php if ($has_links): ?>
-    <ul class="pager clearfix">
-      <?php if ($prev_url): ?>
-        <li class="previous"><a href="<?php print $prev_url; ?>" class="" title="<?php print t('Go to previous page'); ?>"><i class="icon-arrow-left"></i>  <?php print $prev_title; ?></a></li>
-      <?php endif; ?>
-      <?php if ($parent_url): ?>
-        <li><a href="<?php print $parent_url; ?>" class="" title="<?php print t('Go to parent page'); ?>"><i class="icon-arrow-up"></i> <?php print t('up'); ?></a></li>
-      <?php endif; ?>
-      <?php if ($next_url): ?>
-        <li class="next"><a href="<?php print $next_url; ?>" class="" title="<?php print t('Go to next page'); ?>"><?php print $next_title; ?> <i class="icon-arrow-right"></i> </a></li>
-      <?php endif; ?>
-    </ul>
+    <?php if (strlen($tree) != 0): ?>
+      <div class="well">
+        <?php print $tree;?>
+      </div>
     <?php endif; ?>
-
+    <?php if ($has_links): ?>
+    <div class="pager-wrapper">
+      <div class="btn-group" id="book-internal-nav">
+        <?php if ($prev_url): ?>
+          <?php if (strlen($prev_title) > 35):
+            $prev_title = substr($prev_title, 0, 35) . "...";
+          endif; ?>
+          <button class="btn previous"><a href="<?php print $prev_url; ?>" class="" title="<?php print t('Go to previous page'); ?>"><span class="pager-text"><i class="icon-arrow-left"></i> <?php print $prev_title; ?></span></a></button>
+        <?php else: ?>
+          <button class="btn previous disabled"><a href="#"><i class="icon-arrow-left"></i></a></button>
+        <?php endif; ?>
+        <?php if ($parent_url): ?>
+          <button class="btn"><a href="<?php print $parent_url; ?>" class="" title="<?php print t('Go to parent page'); ?>"><span class="pager-text"><i class="icon-arrow-up"></i> <?php print t('up'); ?></span></a></button>
+        <?php else: ?>
+          <button class="btn disabled"><a href="#"><i class="icon-arrow-up"></i></a></button>
+        <?php endif; ?>
+        <?php if ($next_url): ?>
+          <?php if (strlen($next_title) > 35):
+            $next_title = substr($next_title, 0, 35) . "...";
+          endif; ?>
+          <button class="btn next"><a href="<?php print $next_url; ?>" class="" title="<?php print t('Go to next page'); ?>"><span class="pager-text"><?php print $next_title; ?> <i class="icon-arrow-right"></i></span></a></button>
+        <?php else: ?>
+          <button class="btn next disabled"><a href="#"><i class="icon-arrow-right"></i></a></button>
+        <?php endif; ?>
+      </div>
+    </div>
+  <?php endif; ?>
   </div>
 <?php endif; ?>
