@@ -15,6 +15,16 @@ menu, ol, ul, .item-list ul{}
 .region-masthead{margin-top: 15px;float: right;}
 .region-navigation{float: left; }
 
+/* replace JQuery UI icons */
+/* to override jqueryui icons for font icons */
+[class^="icon-"],
+[class*=" icon-"] {
+  background: none !important;
+  background-image: none !important;
+  text-indent: 0 !important;
+  padding: .2em 0 0 .2em !important;
+}
+
 /* general form tweaks */
 .form-item .description {max-width: 660px;}
 .resizable-textarea textarea {width: 100%;}
@@ -38,7 +48,8 @@ menu, ol, ul, .item-list ul{}
 #search-block-form .form-submit{margin-bottom:6px}
 #block-search-form{margin:-2px 0 0;float:right}
 #navbar #block-user-login{position: relative;margin: 18px 0 0;width: 100%;float: right;}
-#block-search-form div{display: inline!important;}
+#block-search-form div{display: inline!important;float:left;}
+#block-search-form .form-item-search-block-form{margin: 5px 2px 0 0;}
 #block-search-form form{margin: 0 15px 0 0}
 #block-user-login form{margin:0}
 #block-user-login .btn{margin: 0}
@@ -53,11 +64,11 @@ menu, ol, ul, .item-list ul{}
 .block-service-links li{display: inline;margin: 0;padding: 0}
 
 /* user menu (after login) */
-#block-system-user-menu {float:right;text-align:right;margin: 0}
-#block-block-6{margin: 0 91px 0 0;clear: both;text-align: right;padding-top: 16px}
+#block-system-user-menu {float:right;margin:0;width:225px;clear:both;}
+#block-block-6{margin:0;clear: both;float: right;padding: 16px 10px 0;width:200px;}
 .logged-in #navbar #block-service-links-service-links,
 .logged-in #navbar #block-service-links-service-links-not-node{margin-right: 0}/* move social icons to the right after login */
-.navbar #block-system-user-menu .nav {margin: 0;}
+.navbar #block-system-user-menu .nav {margin: 0;padding:0;}
 
 /* main nav menu */
 #navbar #block-nice-menus-1 .nav{background:transparent/*#F59540*/;width:100%;border-radius:3px 3px 0 0;
@@ -142,16 +153,69 @@ h2{font-size:18.5px}
 body.admin-menu{padding-top: 20px !important;margin-top:0!important;}
 #block-system-user-menu h2{display: none;}
 
+/* CiviCRM general mods */
+#crm-container tr {font-size:1em;}
+
 /* CiviCRM events calendar */
+.page-events .page-header{padding-bottom: 0;margin-bottom: 10px}
+.view-id-civicrm_events.view-display-id-page .pager{margin: 0}
+.view-id-civicrm_events.view-display-id-page .calendar-calendar .view-item-civicrm_events{padding:2px;}
+.view-id-civicrm_events.view-display-id-page .calendar-calendar .view-item-civicrm_events .contents{
+  padding:7px;line-height: 125%;background: #007CCD!important;color: white;border-radius: 6px;border: none;}
+.view-id-civicrm_events.view-display-id-page .calendar-calendar .view-item-civicrm_events .contents a{
+  color: #fff;text-decoration: none;font-weight: normal;}
+.view .date-nav-wrapper .date-nav {margin: 0}
 .view .date-nav-wrapper .date-prev,.view .date-nav-wrapper .date-next{background-color: transparent;
   border-radius: 0;-moz-border-radius:0;-webkit-border-radius:0;}
 .view .date-nav-wrapper .date-prev{right:auto;}
+.calendar-calendar div.calendar {font-size: .95em}
+.calendar-calendar .month-view .full tr td.today{border-left: 1px solid #ccc;border-right: 1px solid #ccc;background: #ffffcc}
+.calendar-calendar .month-view .full td.date-box.today {border-width: 1px 1px 0 1px;border-style: solid;border-color: #ccc;}
+.calendar-calendar .month-view .full tr td.single-day.today{border-bottom: 1px solid #ccc}
+
+/* CiviCRM individual event display */
+.event_date_time-section,.crm-accordion-wrapper{
+min-height: 20px;
+padding: 0px;
+margin-bottom: 20px;
+background-color: whiteSmoke;
+border: 1px solid #E3E3E3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);}
+.event_date_time-section{padding:15px;}
+#crm-container div#printer-friendly {margin: -1.25em 0.5em 0 0;font-size: 24px;}
+#crm-container .crm-event-info-form-block table.no-border .section-shown{padding: 0}
+#crm-container .event_date_time-section div.label{width: 150px;text-align: left;padding: 10px;}
+#crm-container .event_date_time-section div.content{margin-left: 170px;padding:10px;}
+.crm-accordion-header {border: 1px solid #2d5d96;background-color: #2d5d96;padding: 9px;}
+.crm-accordion-open>.crm-accordion-body{border: 1px solid #e3e3e3;background: #f4f4f4;padding:15px 15px 5px;}
+#crm-container .crm-info-panel{margin:0 0 10px;border:none;}
+#crm-container .crm-accordion-body .crm-info-panel td.label{display: table-cell;padding: 10px;font-size: 1em;
+  color:#fff;background-color: #999}
+#crm-container .crm-accordion-body .crm-info-panel td.html-adjust{color:#555;border:none;padding: 10px;
+  background: transparent;}
+
+#crm-container .iCal_links-section{font-size: 24px;clear: both;float: left;margin: -10px 0 10px}
+.iCal_links-section a{float: left;margin-right: 10px}
+.iCal_links-section a.icon-calendar{display: block;width:25px;height: 25px}
+.iCal_links-section .icon-calendar img{display: none;}
+.iCal_links-section img{width: 40px;height: 18px;display: block;margin: 10px 0 0}
+
+/* CiviCRM Social Links */
+#crm-container .crm-socialnetwork{width:350px;border: none;padding:15px;float: left;margin: 10px 0 0;clear: both;}
+#crm-container .crm-socialnetwork h3{padding: 0 0 6px 2px}
+#crm-container .crm-socialnetwork .description{display: none;}
+.crm-socialnetwork .label{display: block;background: transparent;float: none;width: auto;}
 
 
 /* book navigation */
 .book-nav-horizontal .well{margin:10px 30px 40px;float: left;}
 .book-nav-horizontal .nav{margin: 0;padding: 0}
-.book-nav-horizontal .pager-wrapper{margin-top:45px;clear: both;}
+.book-nav-horizontal .pager-wrapper{margin:45px 0 0 25px;clear: both;}
 #block-book-navigation h2{line-height: 30px;margin-left:-5px;margin-bottom: 5px}
 #block-book-navigation ul.nav li {padding: 0;margin: 0 ;text-indent: -11px}
 #block-book-navigation li [class^="icon-"],#block-book-navigation .nav li [class^="icon-"],
@@ -163,7 +227,7 @@ body.admin-menu{padding-top: 20px !important;margin-top:0!important;}
 #block-book-navigation .nav > li > a {display: inline;}
 .node-type-book .pager{padding: 0}
 #book-internal-nav a{max-width:175px;overflow: hidden}
-
+.crm-accordion-header
 /* book content */
 #content .node-book .field-name-body{min-height:300px;}
 .node-type-book #content h1, .node-type-book #content .region-content{margin-left: 10px}
@@ -226,3 +290,5 @@ body.admin-menu{padding-top: 20px !important;margin-top:0!important;}
 
 /* footer */
 #footer{margin-top: 35px}
+#footer .container{border-top: 1px solid #ddd;padding: 20px 0 0}
+#footer #block-block-1{width: 500px;margin: 20px 0 30px}
