@@ -56,6 +56,8 @@
     jQuery('#page-tabs li a:contains("Devel")').prepend('<i class="icon-beaker"></i>  ');
     jQuery('#page-tabs li a:contains("Track")').prepend('<i class="icon-signal"></i>  ');
     jQuery('#page-tabs li a:contains("Log")').prepend('<i class="icon-filter"></i>  ');
+    jQuery('#printer-friendly .ui-icon-print').addClass('icon-print').removeClass('ui-icon ui-icon-print');
+    jQuery('.iCal_links-section a:first').addClass('icon-calendar');
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
