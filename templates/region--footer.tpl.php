@@ -29,7 +29,7 @@
 <?php if ($content): ?>
   <footer id="footer" class="<?php print $classes; ?>">
   <div class="container">
-    <div class="footer-links pull-right">
+    <div class="footer-links">
     <?php print $content; ?>
   </div>
 </div>
