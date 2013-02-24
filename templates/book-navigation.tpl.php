@@ -34,12 +34,13 @@
 ?>
 <?php if ($tree || $has_links): ?>
   <div id="book-navigation-<?php print $book_id; ?>" class="book-nav-horizontal">
-    <?php if (strlen($tree) != 0): ?>
-      <div class="well">
-        <?php print $tree;?>
-      </div>
-    <?php endif; ?>
-    <?php if ($has_links): ?>
+    <?php // suppresed book child pages tree - ic 2013-02-23
+    // if (strlen($tree) != 0):
+      // echo "<div class=\"well\">";
+      // echo $tree;
+      // echo "</div>";
+    // endif;
+    if ($has_links): ?>
     <div class="pager-wrapper">
       <div class="btn-group" id="book-internal-nav">
         <?php if ($prev_url): ?>
