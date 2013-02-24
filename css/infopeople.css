@@ -157,6 +157,8 @@ body.admin-menu{padding-top: 20px !important;margin-top:0!important;}
 #crm-container tr {font-size:1em;}
 
 /* CiviCRM events calendar */
+.page-events-month.sidebar-second #content{width: 77%}
+.page-events-month.sidebar-second .region-sidebar-second {width: 23%}
 .page-events .page-header{padding-bottom: 0;margin-bottom: 10px}
 .view-id-civicrm_events.view-display-id-page .pager{margin: 0}
 .view-id-civicrm_events.view-display-id-page .calendar-calendar .view-item-civicrm_events{padding:2px;}
@@ -172,6 +174,20 @@ body.admin-menu{padding-top: 20px !important;margin-top:0!important;}
 .calendar-calendar .month-view .full tr td.today{border-left: 1px solid #ccc;border-right: 1px solid #ccc;background: #ffffcc}
 .calendar-calendar .month-view .full td.date-box.today {border-width: 1px 1px 0 1px;border-style: solid;border-color: #ccc;}
 .calendar-calendar .month-view .full tr td.single-day.today{border-bottom: 1px solid #ccc}
+#block-views-civicrm-events-block-2{margin:60px 0 0 10px}
+.upcoming-date-wrapper{
+text-align: right;
+display: inline-block;
+border-left: 4px solid #EEE;
+padding-left: 5px;
+float: left;height: 41px;
+width: 50px;
+font-size: 16px;
+margin-right: 10px;}
+.upcoming-date-title{margin: 0 0 10px 90px;}
+.view-display-id-block_2 ul{margin: 0;padding: 0}
+
+
 
 /* CiviCRM individual event display */
 .event_date_time-section,.crm-accordion-wrapper{
