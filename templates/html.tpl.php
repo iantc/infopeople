@@ -48,7 +48,9 @@
     jQuery('#block-book-navigation .leaf').prepend('<i class="icon-file"></li> ');
     jQuery('#block-system-navigation').addClass('well');
     jQuery('#gplus-wrapper').appendTo('#navbar .service-links');
+    jQuery('#Register .description').addClass('alert alert-info');
     jQuery('.messages.help').addClass('alert alert-info');
+    jQuery('.messages.status').addClass('alert alert-info');
     jQuery('#user-register-form .messages.help').removeClass('alert-info').addClass('alert-warning');
     jQuery('.form-item .description').addClass('alert alert-info');
     jQuery('#page-tabs li a[href$="/edit"]').prepend('<i class="icon-edit"></i>  ');
@@ -58,6 +60,10 @@
     jQuery('#page-tabs li a:contains("Log")').prepend('<i class="icon-filter"></i>  ');
     jQuery('#printer-friendly .ui-icon-print').addClass('icon-print').removeClass('ui-icon ui-icon-print');
     jQuery('.iCal_links-section a:first').addClass('icon-calendar');
+    jQuery('a.crm-register-button').addClass('btn btn-info').removeClass('button');
+    jQuery('#crm-submit-buttons .crm-button').removeClass('crm-button');
+    jQuery('#crm-submit-buttons .form-submit').addClass('btn btn-info').removeClass('form-submit');
+    jQuery('span.mailto').addClass('icon-envelope').removeClass('mailto');
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>

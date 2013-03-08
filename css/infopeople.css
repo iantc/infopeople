@@ -10,6 +10,19 @@
 /* general html */
 menu, ol, ul, .item-list ul{}
 
+/* Merge Bootstrap styles back in */
+#crm-container fieldset legend {
+display: block!important;
+width: 100%!important;
+padding: 0!important;
+font-size: 17px!important;
+line-height: 32px!important;
+color: #333!important;
+border: none!important;
+font-weight: bold!important;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
+}
+
 /* layout */
 .one-sidebar.sidebar-first #content{padding-left:30px;}
 .region-masthead{margin-top: 15px;float: right;}
@@ -31,7 +44,12 @@ menu, ol, ul, .item-list ul{}
 .form-item-timezone select{width: auto;}
 
 /* messages/alerts */
-.messages.alert{margin: 0 0 20px;border: 1px solid #FBEED5;max-width:660px;}
+.messages.alert{margin: 0 0 20px!important;border: 1px solid #FBEED5;max-width:660px;}
+.alert-info {
+color: #3A87AD!important;
+background-color: #D9EDF7!important;
+border-color: #BCE8F1!important;
+}
 
 /* some typography */
 .page-header #page-title{font-size:32px;font-weight: normal;margin-top: 28px}
@@ -190,30 +208,53 @@ margin-right: 10px;}
 
 
 /* CiviCRM individual event display */
-.event_date_time-section,.crm-accordion-wrapper{
-min-height: 20px;
-padding: 0px;
-margin-bottom: 20px;
-background-color: whiteSmoke;
-border: 1px solid #E3E3E3;
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
-border-radius: 4px;
--webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
--moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);}
-.event_date_time-section{padding:15px;}
+.crm-section{
+  }.crm-accordion-wrapper{
+  min-height: 20px;
+  padding: 0px;
+  margin-bottom: 20px;
+  background-color: whiteSmoke;
+  border: 1px solid #E3E3E3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.event_description-section,.event_summary-section{
+  background-color: transparent;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.crm-register-button{color:#fff!important;}
+.crm-section{padding:0;}
 #crm-container div#printer-friendly {margin: -1.25em 0.5em 0 0;font-size: 24px;}
 #crm-container .crm-event-info-form-block table.no-border .section-shown{padding: 0}
-#crm-container .event_date_time-section div.label{width: 150px;text-align: left;padding: 10px;}
-#crm-container .event_date_time-section div.content{margin-left: 170px;padding:10px;}
-.crm-accordion-header {border: 1px solid #2d5d96;background-color: #2d5d96;padding: 9px;}
+#crm-container .crm-section div.label{width: 150px;text-align: left;padding: 10px;color:#3a87ad;background: #D9EDF7;}
+#crm-container .crm-section div.content{margin-left: 170px;padding:10px;}
+.crm-accordion-header {border: 1px solid #2d5d96;padding: 9px;}
 .crm-accordion-open>.crm-accordion-body{border: 1px solid #e3e3e3;background: #f4f4f4;padding:15px 15px 5px;}
 #crm-container .crm-info-panel{margin:0 0 10px;border:none;}
 #crm-container .crm-accordion-body .crm-info-panel td.label{display: table-cell;padding: 10px;font-size: 1em;
-  color:#fff;background-color: #999}
+  color:#3a87ad;background-color: #D9EDF7}
 #crm-container .crm-accordion-body .crm-info-panel td.html-adjust{color:#555;border:none;padding: 10px;
   background: transparent;}
+#crm-container td.price_set_option-label {
+  padding-left: 0;
+}
+.price_set_option-label{
+  padding:0;
+}
+.event-info table{
+  max-width:660px;
+}
 
 #crm-container .iCal_links-section{font-size: 24px;clear: both;float: left;margin: -10px 0 10px}
 .iCal_links-section a{float: left;margin-right: 10px}
@@ -272,8 +313,15 @@ box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);}
 #block-block-5 .ext{display: none;}
 
 /* Account registration */
-#user-register-form .label{font-size: 14px;font-weight: normal;color: #333;text-shadow: none;
+#user-register-form .label, form#Register .label{font-size: 14px;font-weight: normal;color: #333;text-shadow: none;
   background-color: transparent;float: none;width: auto;text-align: left;}
+form#Register .label{
+  width: auto!important;
+  margin: 5px 10px 0 0;
+}
+form#Register select{
+  width:auto;
+}
 #user-register-form .crm-section .content {margin:0;}
 #profilewrap14 fieldset{margin:0;padding: 0}
 #profilewrap14 legend{display: none}
@@ -290,6 +338,19 @@ box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);}
 #user-register-form #edit-timezone .fieldset-wrapper{padding: 0}
 #user-register-form #edit-timezone .description{top:63px;}
 #user-register-form .form-actions{padding: 0;margin-top: 46px}
+
+/* Event registration */
+#noOfparticipants{
+  margin: 0!important;
+}
+#noOfparticipants .content{
+  margin: 0 0 0 4px !important;
+}
+#noOfparticipants .description{
+  display: block;
+  margin: 10px 0 0;
+  max-width:500px;
+}
 
 /* primary tabs */
 #page-tabs{padding: 0}
