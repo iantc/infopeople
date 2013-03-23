@@ -58,12 +58,13 @@ border-color: #BCE8F1!important;
 #logo{margin: 8px 0 5px 10px;height:96px;width: 551px;background: url(/sites/default/files/ifp_logo_1.png) no-repeat;}
 #logo a{display: block;height: 96px}
 #logo img{height: 96px}
-#navbar .navbar-inner{background:#cae1f3;padding-bottom:0;}
+#navbar .navbar-inner{background:#cae1f3;padding-bottom:0;background-image: -webkit-linear-gradient(top, #C7E3F8, #EDF6FC);}
 #navbar .container{position:relative}
 #navbar .brand{height:86px;padding:15px 20px 0 30px;display: block;overflow: hidden;}
 #navbar .brand img{height:96px;width:551px}
 #search-block-form{margin-bottom: 5px}
-#search-block-form .form-submit{margin-bottom:6px}
+#search-block-form .form-submit{margin-bottom:6px;color:#5E83A8;background: #F0F5FA}
+#edit-search-block-form--2{background: #fafafa}
 #block-search-form{margin:-2px 0 0;float:right}
 #navbar #block-user-login{position: relative;margin: 18px 0 0;width: 100%;float: right;}
 #block-search-form div{display: inline!important;float:left;}
@@ -96,16 +97,7 @@ border-color: #BCE8F1!important;
   -moz-border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-webkit-box-shadow: inset 0 1px 1px #ccc;
 -moz-box-shadow: inset 0 1px 1px #ccc;
 box-shadow: inset 0 1px 1px #ccc;}
-#navbar #block-nice-menus-1 li a:hover{border:none;background-color:rgb(0, 136, 204);color:#fff;text-shadow:none;
-  padding-bottom:6px;border-radius:3px 3px 0 0;-moz-border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;
-  background-color: #003769; background-image: -moz-linear-gradient(top, #4f7ab9,#003769);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4f7ab9), to(#003769));
-  background-image: -webkit-linear-gradient(top, #4f7ab9,#003769);background-image: -o-linear-gradient(top, #4f7ab9,#003769);
-  background-image: linear-gradient(to bottom, #4f7ab9,#003769);background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4f7ab9', endColorstr='#ff003769', GradientType=0);
-  *background-color: #003769;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);}
+#navbar #block-nice-menus-1 li a:hover{border:none;background-color:#dfdfdf;}
 .block-nice-menus .dropdown-menu {-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;border:1px solid #ddd;}
 #navbar #block-nice-menus-1 li ul a:hover{background-color:#888;color:#fff;text-shadow:0 1px 0 #bbb;
   -webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;padding:5px 19px 5px 19px;margin:1px;}
@@ -123,15 +115,53 @@ ul.nice-menu-down li.menuparent:hover {background-image: none;}
 .breadcrumb {padding: 8px 15px;margin: 0 0 20px;background-color: #f5f5f5;}
 
 /* slideshow */
+#block-views-front-slideshow-block{display: none;}
 #block-views-front-slideshow-block img{margin:0 auto;display: block;}
 
 /* front page */
-.front #main #content{padding:0 30px 0 50px;}
+.front #main #front-content{padding:0 0 0 3%;}
 #twitter-widget-0{min-width: 100px !important;width: auto!important}
 #crm-event-block{clear: both;float: left;padding:20px 0 10px;}
-#crm-event-block p{float: left;width:167px;padding:0;margin:0 5.25% 15px 0;height:135px;}
-#block-views-most-recent-blog-post-block{float: left;width: 88%;background: #F2F2F2;padding: 20px;}
-.front #block-block-3{background: #F2F2F2;padding: 20px;width: 100%;}
+#crm-event-block p{
+  float: left;
+  width: 190px;
+  padding: 8px;
+  margin: 0 3% 15px 0;
+  height: 103px;
+  border: 1px solid #DDD;
+  color: #888;
+  background: #F7F7F7;
+  border-top: 1px solid #A4C7DD;
+}
+#crm-event-block p em{display: none}
+#block-views-most-recent-blog-post-block{float: left;width: 88%;background: #EFF2FC;padding: 20px;}
+.front #block-block-3{background: #E1F3EF;/*D5E8E0*/padding: 20px;width: 100%;}
+#front-collage{
+}
+#front-collage-inner{
+  background: url(/sites/all/themes/infopeople/images/collage1.png) no-repeat;
+  height: 125px;
+  width: 100%;
+}
+.front #block-civicrm-6{
+  margin-top:20px;
+}
+.front #sidebar_second{
+  margin-top:33px;
+}
+.two-sidebars .region-sidebar-first {
+  float: none;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 200px;
+}
+.two-sidebars .region-sidebar-second {
+  float: none;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
 
 /* login button */
 #toboggan-login-link{background-color: #003769;background-image: -moz-linear-gradient(top, #4f7ab9,#003769);
