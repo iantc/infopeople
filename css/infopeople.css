@@ -55,10 +55,22 @@ border-color: #BCE8F1!important;
 .page-header #page-title{font-size:32px;font-weight: normal;margin-top: 28px}
 
 /* site header */
-#logo{margin: 8px 0 5px 10px;height:96px;width: 551px;background: url(/sites/default/files/ifp_logo_1.png) no-repeat;}
+#logo{margin: 10px 0 5px 10px;height:96px;width: 270px;}
 #logo a{display: block;height: 96px}
 #logo img{height: 96px}
-#navbar .navbar-inner{background:#cae1f3;padding-bottom:0;background-image: -webkit-linear-gradient(top, #C7E3F8, #EDF6FC);}
+#navbar .navbar-inner{
+  padding-bottom:0;
+  background-color:#C7E3F8; /* cae1f3 */
+  background-image: -webkit-linear-gradient(top, #C7E3F8, #EDF6FC);
+  background-image: -moz-linear-gradient(top, #C7E3F8, #EDF6FC);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#C7E3F8), to(#EDF6FC));
+  background-image: -webkit-linear-gradient(top, #C7E3F8,#EDF6FC);
+  background-image: -o-linear-gradient(top, #C7E3F8,#EDF6FC);
+  background-image: linear-gradient(to bottom, #C7E3F8,#EDF6FC);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffC7E3F8', endColorstr='#ffEDF6FC', GradientType=0);
+}
+
 #navbar .container{position:relative}
 #navbar .brand{height:86px;padding:15px 20px 0 30px;display: block;overflow: hidden;}
 #navbar .brand img{height:96px;width:551px}
@@ -66,7 +78,7 @@ border-color: #BCE8F1!important;
 #search-block-form .form-submit{margin-bottom:6px;color:#5E83A8;background: #F0F5FA}
 #edit-search-block-form--2{background: #fafafa}
 #block-search-form{margin:-2px 0 0;float:right}
-#navbar #block-user-login{position: relative;margin: 18px 0 0;width: 100%;float: right;}
+#navbar #block-user-login{position: relative;float: right;}
 #block-search-form div{display: inline!important;float:left;}
 #block-search-form .form-item-search-block-form{margin: 5px 2px 0 0;}
 #block-search-form form{margin: 0 15px 0 0}
@@ -76,28 +88,32 @@ border-color: #BCE8F1!important;
 #header{background: #fff;border:none;padding: 0}
 #main{padding-top:15px;}
 .block-service-links{float: right;margin:3px 0 0;position: relative;}
-#toboggan-login-link{padding-top:7px;padding-bottom: 7px;}
+#toboggan-login-link{padding-top:7px;padding-bottom: 7px;font-size:13px;}
 #gplus-wrapper{display: inline;}
 .block-service-links h2{display: none;}
 .block-service-links ul{margin: 0;padding: 0}
 .block-service-links li{display: inline;margin: 0;padding: 0}
 
 /* user menu (after login) */
-#block-system-user-menu {float:right;margin:0;width:225px;clear:both;}
-#block-block-6{margin:0;clear: both;float: right;padding: 16px 10px 0;width:200px;}
+#block-system-user-menu {float:right;margin:0;clear:both;}
+#block-system-user-menu a{margin: 0 !important;}
+#block-block-6{margin:0;float: right;padding: 10px 10px 0;}
 .logged-in #navbar #block-service-links-service-links,
 .logged-in #navbar #block-service-links-service-links-not-node{margin-right: 0}/* move social icons to the right after login */
 .navbar #block-system-user-menu .nav {margin: 0;padding:0;}
 
 /* main nav menu */
-#navbar #block-nice-menus-1 .nav{background:transparent/*#F59540*/;width:100%;border-radius:3px 3px 0 0;
-  -moz-border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0}
-#navbar #block-nice-menus-1 .nav > li > a{color: #555;text-shadow: none;margin:0 0 -5px;font-size:16px;}
-#navbar #block-nice-menus-1 li a.active{background-color:#fff;color:#565656;border-radius:3px 3px 0 0;
+ul.nice-menu-down li,.nav-tabs > li {
+  margin-bottom: -6px;
+}
+.navbar .nav > li > a {padding-bottom: 5px;margin-bottom: 5px;text-shadow:none;}
+#navbar #block-nice-menus-1 .nav{background:transparent;margin:20px 0 0 15px;}
+.logged-in #navbar #block-nice-menus-1 .nav{margin-top: 10px}
+#navbar #block-nice-menus-1 li a.active{background-color:#fff;color:#565656;border-radius:3px 3px 0 0;border: none;padding-bottom: 10px;margin-bottom: 0;
   -moz-border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;-webkit-box-shadow: inset 0 1px 1px #ccc;
 -moz-box-shadow: inset 0 1px 1px #ccc;
 box-shadow: inset 0 1px 1px #ccc;}
-#navbar #block-nice-menus-1 li a:hover{border:none;background-color:#dfdfdf;}
+#navbar #block-nice-menus-1 li a:hover{background-color:#f79533;color:#fff;}
 .block-nice-menus .dropdown-menu {-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;border:1px solid #ddd;}
 #navbar #block-nice-menus-1 li ul a:hover{background-color:#888;color:#fff;text-shadow:0 1px 0 #bbb;
   -webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;padding:5px 19px 5px 19px;margin:1px;}
@@ -109,7 +125,7 @@ ul.nice-menu-down ul {top:40px;}
 .navbar .nav a .caret {margin-top: 8px;}
 .nav .dropdown-toggle .caret {margin-top: 6px;border-top-color: rgb(0, 136, 204);border-bottom-color: rgb(0, 136, 204);}
 .menuparent .caret {margin-top: 8px;margin-left: 2px;}
-ul.nice-menu-down li.menuparent:hover {background-image: none;}
+ul.nice-menu-down li.menuparent:hover {background: none;}
 
 /* breadcrumb */
 .breadcrumb {padding: 8px 15px;margin: 0 0 20px;background-color: #f5f5f5;}
@@ -124,10 +140,10 @@ ul.nice-menu-down li.menuparent:hover {background-image: none;}
 #crm-event-block{clear: both;float: left;padding:20px 0 10px;}
 #crm-event-block p{
   float: left;
-  width: 190px;
+  width: 175px;
   padding: 8px;
   margin: 0 3% 15px 0;
-  height: 103px;
+  height: 95px;
   border: 1px solid #DDD;
   color: #888;
   background: #F7F7F7;
@@ -137,24 +153,37 @@ ul.nice-menu-down li.menuparent:hover {background-image: none;}
 #block-views-most-recent-blog-post-block{float: left;width: 88%;background: #EFF2FC;padding: 20px;}
 .front #block-block-3{background: #E1F3EF;/*D5E8E0*/padding: 20px;width: 100%;}
 #front-collage{
+  position: absolute;
+  z-index: 1
+}
+.front .crm_blocktitle{
+  padding:10px;
+  background: #fff;
+  color: #f58024;
 }
 #front-collage-inner{
-  background: url(/sites/all/themes/infopeople/images/collage1.png) no-repeat;
-  height: 125px;
+  background: url(/sites/all/themes/infopeople/images/rotate1.jpg) no-repeat 0 0;
+  height: 415px;
   width: 100%;
+  z-index: 2;
+  position: relative;
 }
 .front #block-civicrm-6{
-  margin-top:20px;
+  margin-top:220px;
+  position: relative;
+  z-index: 5;
+  margin-left: 2%;
 }
 .front #sidebar_second{
   margin-top:33px;
+  position: relative;
+  z-index: 5;
 }
 .two-sidebars .region-sidebar-first {
   float: none;
   width: auto;
   margin-left: 0;
   margin-right: 0;
-  min-width: 200px;
 }
 .two-sidebars .region-sidebar-second {
   float: none;
@@ -178,14 +207,16 @@ ul.nice-menu-down li.menuparent:hover {background-image: none;}
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false); }
 
 /* login container */
-#toboggan-container{text-align:left;position:absolute;right:-2px;top:5px;}
+#toboggan-container{}
 #toboggan-container div.user-login-block{text-align:left;position:absolute;right:-2px;z-index:1000;
   background:#f9f9f9;padding:10px;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
   border:1px solid #DDD;box-shadow:0 0 9px #ddd;-moz-box-shadow:0 0 9px #ddd;-webkit-box-shadow:0 0 9px #ddd;margin-top:2px}
+  #toboggan-login label{color: #666}
 #toboggan-login ul{margin:55px 0 0;float: right;}
 #toboggan-login li{list-style:none;padding:0;text-align: right;}
 #toboggan-login a:hover{background-color:transparent!important;color:#005580!important}
 #toboggan-login #edit-actions{position: absolute;}
+#toboggan-login #edit-actions #edit-submit{margin-top:10px;}
 #block-user-login #edit-actions--2{position: absolute;}
 div.toboggan-login-link-container {width: 140px;text-align: right;}
 
@@ -198,7 +229,7 @@ h1,h1.title, h2.node-title,{font-size:32px;color:#595959;margin-top:30px;}
 h2{font-size:18.5px}
 
 /* admin view */
-body.admin-menu{padding-top: 20px !important;margin-top:0!important;}
+body.admin-menu{}
 #block-system-user-menu h2{display: none;}
 
 /* CiviCRM general mods */
