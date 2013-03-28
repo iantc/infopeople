@@ -122,7 +122,7 @@
         </div>
         <div id="front-content" class="column span10" role="main">
           <div class="row-fluid">
-            <div id="front-collage" class="img-polaroid span12">
+            <div id="front-collage" class="span10">
               <div id="front-collage-inner"></div>
             </div>
           </div>
