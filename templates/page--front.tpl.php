@@ -115,19 +115,11 @@
   <div id="main">
     <div class="container">
       <div class="row-fluid">
-        <div class="span2">
-          <?php if ($sidebar_first): ?>
-            <?php print $sidebar_first; ?>
-          <?php endif; ?>
-        </div>
-        <div id="front-content" class="column span10" role="main">
-          <div class="row-fluid">
-            <div id="front-collage" class="span10">
-              <div id="front-collage-inner"></div>
-            </div>
-          </div>
-          <div class="row-fluid">
-            <div class="span9">
+        <div id="front-content" class="" role="main">
+            <div class="span8">
+              <div id="front-collage" class="span10">
+                <div id="front-collage-inner"></div>
+              </div>
               <?php print render($page['highlighted']); ?>
               <?php print $breadcrumb; ?>
               <a id="main-content"></a>
@@ -147,12 +139,16 @@
               <?php print render($page['content']); ?>
               <?php print $feed_icons; ?>
             </div>
-            <div class="span3">
+            <div class="span2">
             <?php if ($sidebar_second): ?>
               <?php print $sidebar_second; ?>
             <?php endif; ?>
             </div>
-          </div>
+            <div class="span2">
+              <?php if ($sidebar_first): ?>
+                <?php print $sidebar_first; ?>
+              <?php endif; ?>
+            </div>
         </div><!-- /#content -->
       </div>
     </div>
