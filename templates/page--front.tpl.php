@@ -116,38 +116,41 @@
     <div class="container">
       <div class="row-fluid">
         <div id="front-content" class="" role="main">
-            <div class="span8">
-              <div id="front-collage" class="span10">
-                <div id="front-collage-inner"></div>
+          <div class="span7">
+            <div id="front-collage" class="span10">
+              <div id="front-collage-inner"></div>
+            </div>
+            <?php print render($page['highlighted']); ?>
+            <?php print $breadcrumb; ?>
+            <a id="main-content"></a>
+            <?php print render($title_prefix); ?>
+            <?php if ($title): ?>
+              <div class="page-header">
+              <h1 class="title" id="page-title"><?php print $title; ?></h1>
               </div>
-              <?php print render($page['highlighted']); ?>
-              <?php print $breadcrumb; ?>
-              <a id="main-content"></a>
-              <?php print render($title_prefix); ?>
-              <?php if ($title): ?>
-                <div class="page-header">
-                <h1 class="title" id="page-title"><?php print $title; ?></h1>
-                </div>
-              <?php endif; ?>
-              <?php print render($title_suffix); ?>
-              <?php print $messages; ?>
-              <?php print render($tabs); ?>
-              <?php print render($page['help']); ?>
-              <?php if ($action_links): ?>
-                <ul class="action-links nav nav-pills"><?php print render($action_links); ?></ul>
-              <?php endif; ?>
-              <?php print render($page['content']); ?>
-              <?php print $feed_icons; ?>
-            </div>
-            <div class="span2">
-            <?php if ($sidebar_second): ?>
-              <?php print $sidebar_second; ?>
             <?php endif; ?>
-            </div>
-            <div class="span2">
-              <?php if ($sidebar_first): ?>
-                <?php print $sidebar_first; ?>
-              <?php endif; ?>
+            <?php print render($title_suffix); ?>
+            <?php print $messages; ?>
+            <?php print render($tabs); ?>
+            <?php print render($page['help']); ?>
+            <?php if ($action_links): ?>
+              <ul class="action-links nav nav-pills"><?php print render($action_links); ?></ul>
+            <?php endif; ?>
+            <?php print render($page['content']); ?>
+            <?php print $feed_icons; ?>
+          </div>
+          <div class="span5">
+            <div class="row-fluid">
+              <div class="span6">
+                <?php if ($sidebar_second): ?>
+                  <?php print $sidebar_second; ?>
+                <?php endif; ?>
+              </div>
+              <div class="span6">
+                <?php if ($sidebar_first): ?>
+                  <?php print $sidebar_first; ?>
+                <?php endif; ?>
+              </div>
             </div>
         </div><!-- /#content -->
       </div>
