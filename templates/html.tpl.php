@@ -21,7 +21,7 @@
   <?php if ($default_mobile_metatags): ?>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
 
@@ -29,7 +29,7 @@
   <?php print $scripts; ?>
   <script type="text/javascript">
   jQuery(document).ready(function(){
-    jQuery('#block-nice-menus-1 ul#nice-menu-1').addClass('nav');
+    jQuery('#block-nice-menus-1 ul#nice-menu-1').addClass('nav nav-tabs');
     jQuery('#toboggan-login-link').addClass('btn btn-info');
     jQuery('#block-system-user-menu .menu').addClass('nav nav-pills');
     jQuery('#block-search-form').addClass('form-search');
