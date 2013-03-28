@@ -13,6 +13,7 @@ regions[sidebar_first_affix] = Sidebar first affix
 regions[sidebar_second_affix] = Sidebar second affix
 regions[header]         = Header
 regions[navigation]     = Navigation bar
+regions[front_highlight]     = Front page highlighted
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
@@ -20,6 +21,15 @@ regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
 regions[footer]         = Footer
 regions[bottom]         = Page bottom
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
