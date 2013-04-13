@@ -142,13 +142,13 @@
           <div class="span5">
             <div class="row-fluid">
               <div class="span6">
-                <?php if ($sidebar_second): ?>
-                  <?php print $sidebar_second; ?>
+                <?php if ($sidebar_first): ?>
+                  <?php print $sidebar_first; ?>
                 <?php endif; ?>
               </div>
               <div class="span6">
-                <?php if ($sidebar_first): ?>
-                  <?php print $sidebar_first; ?>
+                <?php if ($sidebar_second): ?>
+                  <?php print $sidebar_second; ?>
                 <?php endif; ?>
               </div>
             </div>
