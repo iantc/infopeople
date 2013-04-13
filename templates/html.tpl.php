@@ -26,6 +26,14 @@
   <meta http-equiv="cleartype" content="on">
 
   <?php print $styles; ?>
+  <style type="text/css">
+  <?php
+  /** randomize front images **/
+  $rotating_image = rand(1,3);
+  echo "#front-collage-inner{background:url(/sites/all/themes/infopeople/images/rotate"
+    . $rotating_image . ".jpg) no-repeat 0 0;";
+  ?>
+  </style>
   <?php print $scripts; ?>
   <script type="text/javascript">
   jQuery(document).ready(function(){
