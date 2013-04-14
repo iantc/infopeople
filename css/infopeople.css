@@ -74,14 +74,11 @@ menu, ol, ul, .item-list ul{}
 /* site header */
 #logo{
   margin: 10px 0 5px 10px;
-  height:96px;
-  width: 270px;
 }
 #logo a{
-  display: block;
-  height: 96px
 }
-#logo img{height: 96px}
+#logo img{height:auto;max-width:100%;}
+
 #navbar .navbar-inner{
   padding-bottom:0;
   background-color:#C7E3F8; /* cae1f3 */
@@ -99,6 +96,9 @@ menu, ol, ul, .item-list ul{}
 #navbar .brand{height:86px;padding:15px 20px 0 30px;display: block;overflow: hidden;}
 #navbar .brand img{height:96px;width:551px}
 #search-block-form{margin-bottom: 5px}
+#search-block-form .form-actions{
+  padding: 0;
+}
 #search-block-form .form-submit{margin-bottom:6px;color:#5E83A8;background: #F0F5FA}
 #edit-search-block-form--2{background: #fafafa}
 #block-search-form{margin:-2px 0 0;float:right}
@@ -180,20 +180,15 @@ ul.nice-menu-down li.menuparent:hover {background: none;}
   background: #EFF2FC;
   padding: 20px;
 }
-
 .front #block-block-3 h2{
-  padding:10px 15px;
-  color:#666;
-  font-size:15px;
-  background: #f2f2f2;
 }
 .front #block-block-3 ul{
-  padding: 5px 5px 20px 15px;
+  padding: 0 5px 20px 5px;
   margin: 0;
 }
 .front #block-block-3 li{
 list-style: none;
-margin: 10px 0 10px 12px;
+margin: 0 0 10px 12px;
 padding: 5px 0;
 text-indent: -22px;
 }
@@ -377,6 +372,7 @@ article.node-teaser {
 
 /* sidebar */
 .well ul{margin:0 0 10px;}
+#sidebar_first .nav,#sidebar_second .nav{padding: 0}
 
 /* Twitter panel */
 #block-block-5 .ext{display: none;}
@@ -437,7 +433,12 @@ form#Register select{
 /* footer */
 #footer{margin-top: 35px}
 #footer .container{border-top: 1px solid #ddd;padding: 20px 0 0}
-#footer #block-block-1{width: 500px;margin: 20px 0 30px}
+#footer #block-block-1{
+  width: 500px;
+  margin: 20px 0 30px;
+  clear: both;
+  float: left;
+}
 
 
 /* blogs theming */
@@ -464,3 +465,30 @@ background-color: #999;
 -moz-border-radius: 5px;
 border-radius: 5px;
 background-color: #2D6987;}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #logo img{height:60px;}
+  #logo{margin: 10px 5px;clear: both;}
+  #navbar #block-user-login {margin-bottom: 0}
+  #navbar #block-nice-menus-1 .nav {margin: 0}
+  .region-masthead {margin: 5px;float: none;}
+  .region-navigation {float: none;
+    background-color: #F5F5F5;
+    border: 1px solid #E3E3E3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+  #block-search-form {float: left;}
+  #edit-search-block-form--2 {width: auto;min-width: 145px;}
+  .region-masthead .block-service-links{display: none;}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  #block-search-form form {margin: 0}
+}

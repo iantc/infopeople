@@ -14,7 +14,7 @@ function infopeople_css_alter(&$css) {
   unset($css[drupal_get_path('theme', 'zenstrap') . '/bootstrap/css/bootstrap.css']);
 }
 
-function infopeople_mymodule_js_alter(&$javascript) {
+function infopeople_js_alter(&$javascript) {
   unset($javascript[drupal_get_path('theme', 'zenstrap') . '/bootstrap/js/bootstrap.js']);
 }
 
