@@ -47,7 +47,7 @@ function infopeople_menu_local_tasks(&$variables) {
 
   if (!empty($variables['primary'])) {
     $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] = '<div class="btn-group pull-right"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Page Options<span class="caret"></span></a>';
+    $variables['primary']['#prefix'] = '<div class="btn-group pull-right" id="page-options"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Page Options<span class="caret"></span></a>';
     $variables['primary']['#prefix'] .= '<ul class="dropdown-menu" id="page-tabs">';
     $variables['primary']['#suffix'] = '</ul></div>';
     $output .= drupal_render($variables['primary']);
