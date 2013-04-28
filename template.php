@@ -12,6 +12,7 @@ function infopeople_css_alter(&$css) {
   unset($css[libraries_get_path('bootstrap') . '/css/bootstrap.css']);
   unset($css[libraries_get_path('bootstrap') . '/css/bootstrap-responsive.css']);
   unset($css[drupal_get_path('theme', 'zenstrap') . '/bootstrap/css/bootstrap.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/layouts/responsive-sidebars.css']);
 }
 
 function infopeople_js_alter(&$javascript) {
