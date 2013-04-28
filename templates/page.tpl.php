@@ -108,7 +108,6 @@
     <div class="container">
       <div class="row-fluid">
         <div id="content" class="column" role="main">
-          <?php print render($page['highlighted']); ?>
           <?php print $breadcrumb; ?>
           <a id="main-content"></a>
           <?php print render($title_prefix); ?>
@@ -119,6 +118,7 @@
           <?php endif; ?>
           <?php print render($title_suffix); ?>
           <?php print $messages; ?>
+          <?php print render($page['highlighted']); ?>
           <?php print render($tabs); ?>
           <?php print render($page['help']); ?>
           <?php if ($action_links): ?>
@@ -141,7 +141,18 @@
       </div>
     </div>
   </div><!-- /#main -->
-  <?php print render($page['footer']); ?>
+  <footer id="footer" class="<?php print $classes; ?>">
+    <div class="container">
+      <div class="row">
+        <div class="span6">
+          <?php print render($page['footer_left']); ?>
+        </div>
+        <div class="span6">
+          <?php print render($page['footer_right']); ?>
+        </div>
+      </div>
+    </div>
+  </footer><!-- region__footer -->
   <?php if ($login_block): ?>
     <?php print $login_block; ?>
   <?php endif; ?>
