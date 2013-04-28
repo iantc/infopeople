@@ -24,7 +24,9 @@ menu, ol, ul, .item-list ul{}
 }
 
 /* layout */
-#content{padding:0 20px;}
+.front .sidebar{
+  margin-top: 25px;
+}
 .one-sidebar.sidebar-first #content{
   padding-left:30px;
 }
@@ -167,42 +169,71 @@ ul.nice-menu-down li.menuparent:hover {background: none;}
 #block-views-front-slideshow-block img{margin:0 auto;display: block;}
 
 /* front page */
-.front #main #content{padding:0 3%;}
-#block-block-8{margin:15px 2%;padding:2px 15px;border: 1px solid #E2F2F8;
-border-radius: 4px;
-background-color: #E2F2F8;
-background-image: -moz-linear-gradient(#F5FBFF, #E2F2F8);
-background-image: -webkit-linear-gradient(#F5FBFF, #E2F2F8);
-background-image: linear-gradient(#F5FBFF, #E2F2F8);}
+.front #main #content{
+  padding:0 1.5%;
+}
+.front .node-1173 .links.inline{
+  display: none;
+}
+#block-block-8{
+  margin:15px 2%;
+  padding:2px 15px;
+  border: 1px solid #E2F2F8;
+  border-radius: 4px;
+  background-color: #E2F2F8;
+  background-image: -moz-linear-gradient(#F5FBFF, #E2F2F8);
+  background-image: -webkit-linear-gradient(#F5FBFF, #E2F2F8);
+  background-image: linear-gradient(#F5FBFF, #E2F2F8);
+}
 #block-block-8 h2{color: #666;margin: 6px 0 3px;font-size:18px;}
 #block-block-8 p{margin: 0 0 10px}
-#block-block-8 img{ float: right;
+#block-block-8 img{
+  float: right;
   height: auto;
   margin-left: 15px;
   margin-top: -15px;
 }
-#block-views-cevent-base-block-2{float: left;margin: 15px 2.5%;padding:0 10px;}
+#block-views-cevent-base-block-2{
+  float: left;
+  margin: 15px 2.5%;
+  padding:0 10px;
+}
 #block-views-cevent-base-block-2 h2{color: #F79533}
-#twitter-widget-0{min-width: 100px !important;width: auto!important}
+#twitter-widget-1{min-width: 100px !important;width: auto!important}
 #crm-event-block{clear: both;float: left;padding:20px 0 10px;}
-#crm-event-block p{float: left;width:167px;padding:0;margin:0 5.25% 15px 0;height:135px;}
-.front #block-block-3{padding: 12px;width: 100%;border: 1px solid #dedede;
-border-radius: 4px;
-background-color: #F2F2F2;
-background-image: -moz-linear-gradient(#f2f2f2, #efefef);
-background-image: -webkit-linear-gradient(#f2f2f2, #efefef);
-background-image: linear-gradient(#f2f2f2, #efefef);}
-.front #block-block-3 h2{
+#crm-event-block p{
+  float: left;
+  width:167px;
+  padding:0;
+  margin:0 5.25% 15px 0;
+  height:135px;
+}
+.front #block-block-3,
+.front #block-views-most-recent-blog-post-block{
+  padding: 12px;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  background-image: -moz-linear-gradient(#eff2fc, #f9f9f9);
+  background-image: -webkit-linear-gradient(#eff2fc, #f9f9f9);
+  background-image: linear-gradient(#eff2fc, #f9f9f9);
+}
+.front #block-block-3{
+  background-color: #F2F2F2;
+  background-image: -moz-linear-gradient(#f2f2f2, #efefef);
+  background-image: -webkit-linear-gradient(#f2f2f2, #efefef);
+  background-image: linear-gradient(#f2f2f2, #efefef);
+}
+.front #block-block-3 h2,
+.front #block-views-most-recent-blog-post-block h2{
   color: #666;
   font-size: 18px;
 }
 #crm-event-block p em{
   display: none}
-#block-views-most-recent-blog-post-block{
-  float: left;
-  width: 100%;
+.front #block-views-most-recent-blog-post-block{
   background: #EFF2FC;
-  padding: 5px 15px 10px;
+}
+.front #sidebar_second{
 }
 .front #block-block-3 ul{
   padding: 0 5px 20px 5px;
@@ -218,8 +249,6 @@ text-indent: -22px;
 #block-views-cevent-base-block-2 .views-field-title{float:left;margin:0 10px 0 0;font-weight: bold;max-width: 81%}
 #block-views-cevent-base-block-2 .views-field-event-type{float: right}
 #block-views-cevent-base-block-2 .views-field-start-date{clear: both;color:#575757;}
-.views-field-event-type .Online{background-color: #178ACC;font-weight: normal;}
-.views-field-event-type .Webinar{background-color: #F1CEAB;color: #DD5600;font-weight: normal;}
 
 
 /* login button */
@@ -271,14 +300,26 @@ body.admin-menu{}
 .page-events .page-header{padding-bottom: 0;margin-bottom: 10px}
 .view-id-civicrm_events.view-display-id-page .pager{margin: 0}
 .view-id-civicrm_events.view-display-id-page .calendar-calendar .view-item-civicrm_events{padding:2px;}
-.view-id-civicrm_events.view-display-id-page .calendar-calendar .view-item-civicrm_events .contents{
-  padding:7px;line-height: 125%;background: #007CCD!important;color: white;border-radius: 6px;border: none;}
+.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
+background: #fff;}
+.calendar-calendar .month-view .full td.single-day .inner div.alert
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div.alert{
+  padding: 8px;
+  background-color: #178ACC !important;
+  border: 1px solid #EFB99E;
+  color:#fff;
+  text-shadow:none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
 .view-id-civicrm_events.view-display-id-page .calendar-calendar .view-item-civicrm_events .contents a{
   color: #fff;text-decoration: none;font-weight: normal;}
 .view .date-nav-wrapper .date-nav {margin: 0}
 .view .date-nav-wrapper .date-prev,.view .date-nav-wrapper .date-next{background-color: transparent;
   border-radius: 0;-moz-border-radius:0;-webkit-border-radius:0;}
-.view .date-nav-wrapper .date-prev{right:auto;}
+.view .date-nav-wrapper .date-prev{right:auto;left:0;}
 .calendar-calendar div.calendar {font-size: .95em}
 .calendar-calendar .month-view .full tr td.today{border-left: 1px solid #ccc;border-right: 1px solid #ccc;background: #ffffcc}
 .calendar-calendar .month-view .full td.date-box.today {border-width: 1px 1px 0 1px;border-style: solid;border-color: #ccc;}
@@ -296,6 +337,12 @@ margin-right: 10px;}
 .upcoming-date-title{margin: 0 0 10px 90px;}
 .view-display-id-block_2 ul{margin: 0;padding: 0}
 
+.views-field-event-type .Online, .calendar-calendar .month-view .full td.single-day .inner div.Online,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div.Online{background-color: #178ACC !important;font-weight: normal;}
+.views-field-event-type .Webinar,.calendar-calendar .month-view .full td.single-day .inner div.Webinar,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div.Webinar{background-color: #F1CEAB !important;color: #DD5600 !important;font-weight: normal;}
+.views-field-event-type .Webinar a,.calendar-calendar .month-view .full td.single-day .inner div.Webinar a,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div.Webinar a{color: #DD5600 !important;}
 
 
 /* CiviCRM individual event display */
@@ -378,7 +425,7 @@ margin-right: 10px;}
 #block-book-navigation .nav > li > a {display: inline;}
 .node-type-book .pager{padding: 0}
 #book-internal-nav a{max-width:175px;overflow: hidden}
-.crm-accordion-header
+
 /* book content */
 #content .node-book .field-name-body{min-height:300px;}
 .node-type-book #content h1, .node-type-book #content .region-content{margin-left: 10px}
@@ -400,6 +447,10 @@ article.node-teaser {
 .view-id-cevent_base li{padding: 8px!important;margin:0!important;line-height: 20px;text-align: left;
   vertical-align: top;border-top: 1px solid #dddddd;}
 .view-id-cevent_base .views-row-odd{background-color: #f9f9f9;}
+.view-display-id-page_1 li{float: left;width: 100%;clear: both;}
+.view-display-id-page_1 .views-field-title{float:left;margin:0 10px 0 0;font-weight: bold;max-width: 81%}
+.view-display-id-page_1 .views-field-event-type{float: right}
+.view-display-id-page_1 .views-field-start-date{clear: both;color:#575757;}
 
 /* sidebar */
 .well ul{margin:0 0 10px;}
@@ -409,8 +460,7 @@ article.node-teaser {
 #block-block-5 .ext{display: none;}
 
 /* Account registration */
-#user-register-form .label, form#Register .label{font-size: 14px;font-weight: normal;color: #333;text-shadow: none;
-  background-color: transparent;float: none;width: auto;text-align: left;}
+
 form#Register .label{
   width: auto!important;
   margin: 5px 10px 0 0;
