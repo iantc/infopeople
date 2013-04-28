@@ -3,6 +3,7 @@ description = The Infopeople theme integrates the Twitter Bootstrap framework th
 core = 7.x
 base theme  = zenstrap
 
+stylesheets[all][] = css/responsive-sidebars.css
 stylesheets[all][] = css/infopeople.css
 
 regions[hidden] = Hidden
@@ -19,7 +20,8 @@ regions[help]           = Help
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
-regions[footer]         = Footer
+regions[footer_left]         = Footer left
+regions[footer_right]         = Footer right
 regions[bottom]         = Page bottom
 
 features[] = logo
