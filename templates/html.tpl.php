@@ -56,11 +56,9 @@
     jQuery('#block-book-navigation .leaf').prepend('<i class="icon-file"></li> ');
     jQuery('#block-system-navigation').addClass('well');
     jQuery('#gplus-wrapper').appendTo('#navbar .service-links');
-    jQuery('#Register .description').addClass('alert alert-info');
     jQuery('.messages.help').addClass('alert alert-info');
     jQuery('.messages.status').addClass('alert alert-info');
     jQuery('#user-register-form .messages.help').removeClass('alert-info').addClass('alert-warning');
-    jQuery('.form-item .description').addClass('alert alert-info');
     jQuery('#page-tabs li a[href$="/edit"]').prepend('<i class="icon-edit"></i>  ');
     jQuery('#page-tabs li a:contains("View")').prepend('<i class="icon-eye-open"></i>  ');
     jQuery('#page-tabs li a:contains("Devel")').prepend('<i class="icon-beaker"></i>  ');
