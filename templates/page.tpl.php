@@ -8,21 +8,26 @@
   <header id="header" role="banner">
     <div id="navbar" class="navbar navbar-medium navbar-static-top">
       <div class="navbar-inner">
-        <div class="container">
-          <?php print render($page['masthead']) ?>
+        <div class="container row-fluid">
           <?php if ($logo): ?>
-            <div id="logo">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+            <div id="logo-wrapper" class="span6">
+              <div id="logo">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo-link"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+              </div>
+              <div id="tagline">
+                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="tagline-link"><img src="/sites/all/themes/infopeople/images/tagline_2013.png" alt="<?php print t('Home'); ?>" /></a>
+              </div>
             </div>
           <?php endif; ?>
+          <?php print render($page['masthead']) ?>
           <?php if ($site_name || $site_slogan): ?>
             <!--       <hgroup id="name-and-slogan" > -->
             <?php if ($site_name): ?>
               <!--  <h1 id="site-name"> -->
               <a class="brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              <!--           </h1> -->
+              <!-- </h1> -->
             <?php endif; ?>
-            <!--  </hgroup><!-- /#name-and-slogan -->
+            <!--  </hgroup> /#name-and-slogan -->
           <?php endif; ?>
           <div id="gplus-wrapper"><a href="https://plus.google.com/118030402011071787281?prsrc=3" rel="publisher" style="text-decoration:none;">
             <img src="/sites/all/themes/infopeople/social/google.png" alt="Google+" /></a>
