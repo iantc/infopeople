@@ -1,6 +1,14 @@
 
-/* general html */
+/* general typography */
 menu, ol, ul, .item-list ul{}
+p{
+  line-height: 22px;
+}
+blockquote p {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 25px;
+}
 
 /* Merge Bootstrap styles back in */
 #crm-container fieldset legend {
@@ -30,11 +38,17 @@ menu, ol, ul, .item-list ul{}
   margin-top: 15px;
 }
 .one-sidebar.sidebar-first #content{
-  padding-left:30px;
+  padding-left:2%;
+}
+#logo-wrapper{
+  width:49%
+  ;
 }
 .region-masthead{
   margin-top: 15px;
   float: right;
+  margin-left: .75% !important;
+  width:49% !important;
 }
 .region-navigation{
   position: relative;
@@ -73,14 +87,27 @@ menu, ol, ul, .item-list ul{}
 .page-header #page-title{
   font-size:28px;
   font-weight: normal;
-  margin-top: 28px
+  margin-top: 20px;
+  padding-left:5px;
+}
+.page-training-view .page-header,.section-training.page-views .page-header{
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* site header */
 #logo{
   margin: 10px 0 5px 10px;
+  max-width: 205px;
+}
+#tagline{
+  float: left;
+  margin-top: 46px;
+  margin-left: -17px;
 }
 #logo a{
+  float: left;
 }
 #logo img{height:auto;max-width:100%;}
 
@@ -105,7 +132,10 @@ menu, ol, ul, .item-list ul{}
   padding: 0;
 }
 #search-block-form .form-submit{margin-bottom:6px;color:#5E83A8;background: #F0F5FA}
-#edit-search-block-form--2{background: #fafafa}
+#edit-search-block-form--2{
+  background: #fafafa;
+  max-width: 165px;
+}
 #block-search-form{margin:-2px 0 0;float:right}
 #navbar #block-user-login{position: relative;float: right;}
 #block-search-form div{display: inline!important;float:left;}
@@ -180,7 +210,7 @@ ul.nice-menu-down ul {
 ul.nice-menu-down li.menuparent:hover {background: none;}
 
 /* breadcrumb */
-.breadcrumb {padding: 8px 15px;margin: 0 0 20px;background-color: #f5f5f5;}
+.breadcrumb {padding: 8px 15px;margin: 10px 0 20px;background-color: #f5f5f5;}
 
 /* slideshow */
 #block-views-front-slideshow-block{display: none;}
@@ -552,8 +582,11 @@ article.node-teaser {
 /* training list */
 
 .view-id-cevent_base .item-list ul{
-  margin-left: 0;
-  padding: 0
+  margin: 5px 0 20px;
+  padding: 0;
+  float: left;
+  clear: both;
+  max-width: 760px;
 }
 .view-id-cevent_base li{
   float: left;
@@ -781,11 +814,14 @@ form#Register select{
   .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
     width: auto;
   }
+  #tagline{margin: 5px}
+  .region-masthead{width: 43%!important}
 }
 @media (max-width: 767px) {
   body{font-size: 13px}
-  #logo img{height:60px;}
+  #logo img{height:48px;}
   #logo{margin: 10px 5px;clear: both;}
+
   #navbar #block-user-login {margin-bottom: 0}
   #navbar #block-nice-menus-1 .nav {margin: 0}
   .region-masthead {margin: 5px;float: none;}
@@ -806,4 +842,9 @@ form#Register select{
 /* Landscape phones and down */
 @media (max-width: 480px) {
   #block-search-form form {margin: 0}
+  .region-masthead{width: 100% !important;clear: both;float: right !important;}
+  #logo-wrapper{width: 100%}
+  #block-search-form {float: right;}
+  .navbar .btn-navbar {top:89px;left: -2px;right: auto;}
+  div.toboggan-login-link-container {width: auto}
 }
