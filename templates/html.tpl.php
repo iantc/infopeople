@@ -70,6 +70,7 @@
     jQuery('#crm-submit-buttons .crm-button').removeClass('crm-button');
     jQuery('#crm-submit-buttons .form-submit').addClass('btn btn-info').removeClass('form-submit');
     jQuery('span.mailto').addClass('icon-envelope').removeClass('mailto');
+    jQuery('#crm-container #Register').addClass('well');
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
