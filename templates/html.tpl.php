@@ -65,12 +65,15 @@
     jQuery('#page-tabs li a:contains("Track")').prepend('<i class="icon-signal"></i>  ');
     jQuery('#page-tabs li a:contains("Log")').prepend('<i class="icon-filter"></i>  ');
     jQuery('#printer-friendly .ui-icon-print').addClass('icon-print').removeClass('ui-icon ui-icon-print');
-    jQuery('.iCal_links-section a:first').addClass('icon-calendar');
     jQuery('a.crm-register-button').addClass('btn btn-info').removeClass('button');
     jQuery('#crm-submit-buttons .crm-button').removeClass('crm-button');
     jQuery('#crm-submit-buttons .form-submit').addClass('btn btn-info').removeClass('form-submit');
     jQuery('span.mailto').addClass('icon-envelope').removeClass('mailto');
     jQuery('#crm-container #Register').addClass('well');
+    jQuery('#event-login-link').click(function() {
+      jQuery('#toboggan-login').toggleClass('lower').toggle('fast');
+      return false;
+    });
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
