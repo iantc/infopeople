@@ -11,7 +11,16 @@
 function infopeople_css_alter(&$css) {
   unset($css[libraries_get_path('bootstrap') . '/css/bootstrap.css']);
   unset($css[libraries_get_path('bootstrap') . '/css/bootstrap-responsive.css']);
+  unset($css[drupal_get_path('module', 'civicrm') . '/css/civicrm.css']);
   unset($css[drupal_get_path('theme', 'zenstrap') . '/bootstrap/css/bootstrap.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/normalize.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/wireframes.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/comments.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/fields.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/blocks.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/nodes.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/pages.css']);
+  unset($css[drupal_get_path('theme', 'zenstrap') . '/css/tabs.css']);
   unset($css[drupal_get_path('theme', 'zenstrap') . '/css/layouts/responsive-sidebars.css']);
 }
 
