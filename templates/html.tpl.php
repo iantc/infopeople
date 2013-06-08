@@ -46,7 +46,7 @@
     jQuery('#toboggan-login #edit-actions').removeClass('form-actions');
     jQuery('#edit-actions--2').removeClass('form-actions');
     jQuery('#block-search-form .form-submit').removeClass('btn-primary');
-    jQuery('#block-book-navigation').addClass('well');
+    jQuery('#block-book-navigation').addClass('well well-small');
     jQuery('#block-book-navigation .expanded').prepend('<i class="icon-angle-down"></li> ');
     jQuery('#block-book-navigation .collapsed').prepend('<i class="icon-angle-right"></li> ');
     jQuery('.book-nav-horizontal .nav a').prepend('<i class="icon-angle-right"></li> ');
@@ -54,7 +54,7 @@
     jQuery('ul.nice-menu-down li.menuparent ul').addClass('dropdown-menu');
     jQuery('ul.nice-menu-down li.menuparent ul a b').remove();
     jQuery('#block-book-navigation .leaf').prepend('<i class="icon-file"></li> ');
-    jQuery('#block-system-navigation').addClass('well');
+    jQuery('#block-system-navigation').addClass('well well-small');
     jQuery('#gplus-wrapper').appendTo('#navbar .service-links');
     jQuery('.messages.help').addClass('alert alert-info');
     jQuery('.messages.status').addClass('alert alert-info');
@@ -68,8 +68,10 @@
     jQuery('a.crm-register-button').addClass('btn btn-info').removeClass('button');
     jQuery('#crm-submit-buttons .crm-button').removeClass('crm-button');
     jQuery('#crm-submit-buttons .form-submit').addClass('btn btn-info').removeClass('form-submit');
+    jQuery('#crm-submit-buttons .crm-button-type-back .btn').removeClass('btn-info');
     jQuery('span.mailto').addClass('icon-envelope').removeClass('mailto');
-    jQuery('#crm-container #Register').addClass('well');
+    jQuery('#crm-container #Register').addClass('well well-small');
+    jQuery('#_qf_Register_reload').addClass('btn').removeClass('form-submit');
     jQuery('#event-login-link').click(function() {
       jQuery('#toboggan-login').toggleClass('lower').toggle('fast');
       return false;
@@ -87,9 +89,9 @@
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <?php if ($skip_link_text && $skip_link_anchor): ?>
-    <p id="skip-link">
+    <div id="skip-link">
       <a href="#<?php print $skip_link_anchor; ?>" class="element-invisible element-focusable"><?php print $skip_link_text; ?></a>
-    </p>
+    </div>
   <?php endif; ?>
   <?php print $page_top; ?>
   <?php print $page; ?>
