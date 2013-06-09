@@ -76,6 +76,7 @@
       jQuery('#toboggan-login').toggleClass('lower').toggle('fast');
       return false;
     });
+    jQuery('.crm-actions-ribbon .helpicon').addClass('icon-question-sign');
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
