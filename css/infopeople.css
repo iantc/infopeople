@@ -5,6 +5,9 @@ p{
   line-height: 20px !important;
   margin:0 0 10px !important;
 }
+blockquote{
+  border-left: none;
+}
 blockquote p {
   font-size: 14px;
   font-weight: normal;
@@ -554,7 +557,17 @@ margin-right: 10px;}
 }
 .page-civicrm-event .page-header{
   margin-bottom: 0;
+  padding-bottom: 0;
   border: none;
+}
+.page-civicrm-event .page-header #page-title{
+  margin-bottom: 0;
+}
+.subtitle-wrapper{
+  margin: 0 10px 15px;
+}
+.subtitle-wrapper h2{
+  margin-top: 0;
 }
 .crm-accordion-wrapper{
   min-height: 20px;
@@ -587,6 +600,12 @@ margin-right: 10px;}
 }
 #crm-container fieldset {
   margin: 10px 6px;
+}
+.event-instructor{
+  padding: 10px 0 20px;
+}
+.event-instructor p{
+  display: inline;
 }
 #crm-container .event-info-wrapper{
   background-color: #8faa6B;
@@ -633,8 +652,9 @@ margin-right: 10px;}
   border:none;
 }
 #crm-event-info-wrapper{
-  background-color: #fafafa;
-  padding-bottom: 40px
+  padding-bottom: 40px;
+  margin: 0 10px;
+  clear: both;
 }
 #crm-event-info-wrapper .row{
   margin-left: 0;
@@ -646,12 +666,19 @@ margin-right: 10px;}
 .editor #Event_Attribs__Admin__23_wrapper{
   display: block;
 }
+#crm-container .register_link-top {
+  float: left;
+  margin: 0 0 15px 11px;
+}
 .crm-event-manage-tab-actions-ribbon{
   float: left;
+  max-width: 487px;
+  width: 100%;
   font-size:15px;
-  margin: 12px 0 0 20px !important;
-  width:100%;
-  clear: both;
+  margin:0 !important;
+}
+#crm-container .crm-event-manage-tab-actions-ribbon ul{
+  float: right;
 }
 #crm-container .crm-actions-ribbon li {
   margin: 0 !important;
@@ -666,7 +693,7 @@ margin-right: 10px;}
   padding:0;
 }
 #crm-container div#printer-friendly {
-  margin:-3em 0.5em 0 0;
+  margin:-55px 5px 0 0;
   font-size: 24px;
 }
 #crm-container .crm-event-info-form-block table.no-border .section-shown{

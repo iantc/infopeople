@@ -65,7 +65,6 @@
     jQuery('#page-tabs li a:contains("Track")').prepend('<i class="icon-signal"></i>  ');
     jQuery('#page-tabs li a:contains("Log")').prepend('<i class="icon-filter"></i>  ');
     jQuery('#printer-friendly .ui-icon-print').addClass('icon-print').removeClass('ui-icon ui-icon-print');
-    jQuery('a.crm-register-button').addClass('btn btn-info').removeClass('button');
     jQuery('#crm-submit-buttons .crm-button').removeClass('crm-button');
     jQuery('#crm-submit-buttons .form-submit').addClass('btn btn-info').removeClass('form-submit');
     jQuery('#crm-submit-buttons .crm-button-type-back .btn').removeClass('btn-info');
