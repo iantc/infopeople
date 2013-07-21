@@ -24,7 +24,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php endif; ?>
   <meta http-equiv="cleartype" content="on">
-
   <?php print $styles; ?>
   <style type="text/css">
   <?php
@@ -55,7 +54,7 @@
     jQuery('ul.nice-menu-down li.menuparent ul a b').remove();
     jQuery('#block-book-navigation .leaf').prepend('<i class="icon-file"></li> ');
     jQuery('#block-system-navigation').addClass('well well-small');
-    jQuery('#gplus-wrapper').appendTo('#navbar .service-links');
+    jQuery('#gplus-wrapper').appendTo('#navbar .service-links').css("visibility", "visible");
     jQuery('.messages.help').addClass('alert alert-info');
     jQuery('.messages.status').addClass('alert alert-info');
     jQuery('#user-register-form .messages.help').removeClass('alert-info').addClass('alert-warning');
@@ -76,6 +75,8 @@
       return false;
     });
     jQuery('.crm-actions-ribbon .helpicon').addClass('icon-question-sign');
+    jQuery('.page-civicrm-event-info .messages.status').prependTo('#crm-event-info-wrapper').show();
+    jQuery()
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>

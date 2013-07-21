@@ -11,6 +11,7 @@
 function infopeople_css_alter(&$css) {
   unset($css[libraries_get_path('bootstrap') . '/css/bootstrap.css']);
   unset($css[libraries_get_path('bootstrap') . '/css/bootstrap-responsive.css']);
+  unset($css[libraries_get_path('bootstrap') . '/css/font-awesome.min.css']);
   unset($css[drupal_get_path('module', 'civicrm') . '/css/civicrm.css']);
   unset($css[drupal_get_path('theme', 'zenstrap') . '/bootstrap/css/bootstrap.css']);
   unset($css[drupal_get_path('theme', 'zenstrap') . '/css/normalize.css']);
@@ -28,16 +29,22 @@ function infopeople_js_alter(&$javascript) {
   unset($javascript[drupal_get_path('theme', 'zenstrap') . '/bootstrap/js/bootstrap.js']);
 }
 
+function infopeople_preprocess_html(&$variables) {
+  drupal_add_css('//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css', array('group' => CSS_DEFAULT, 'weight' => -50,'type' => 'external'));
+  drupal_add_css('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', array('group' => CSS_DEFAULT, 'weight' => -48,'type' => 'external'));
+  drupal_add_js('//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js', array('weight' => '-1000','type' => 'external'));
+}
+
 function infopeople_preprocess_page(&$vars) {
   $page = $vars['page'];
 
   // Connect Twitter's Bootstrap framework using Libraries API.
   if (module_exists('libraries') && $bootstrap_path = libraries_get_path('bootstrap')) {
     //unset($css[$bootstrap_path . '/css/bootstrap.css']);
-    drupal_add_css($bootstrap_path . '/css/bootstrap.min.css', array('media' => 'all'));
-    drupal_add_css($bootstrap_path . '/css/bootstrap-responsive.min.css', array('media' => 'screen'));
-    drupal_add_css($bootstrap_path . '/css/font-awesome.min.css', array('media' => 'screen'));
-    drupal_add_js($bootstrap_path . '/js/bootstrap.min.js');
+    //drupal_add_css($bootstrap_path . '/css/bootstrap.min.css', array('media' => 'all'));
+    //drupal_add_css($bootstrap_path . '/css/bootstrap-responsive.min.css', array('media' => 'screen'));
+    //drupal_add_css($bootstrap_path . '/css/font-awesome.min.css', array('media' => 'screen'));
+    //drupal_add_js($bootstrap_path . '/js/bootstrap.min.js');
   }
   else {
     // Notify a user if Bootstrap library was not found.
