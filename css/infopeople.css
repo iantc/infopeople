@@ -383,7 +383,9 @@ h2{font-size:18.5px}
 /* admin view */
 body.admin-menu{}
 #block-system-user-menu h2{display: none;}
-
+.page-civicrm-admin .container{
+  width:96.6%;
+}
 
 /* CiviCrm merge with Boostrap */
 #crm-container h3 {
