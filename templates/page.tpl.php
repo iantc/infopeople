@@ -34,7 +34,7 @@
           </div>
             <?php if ($main_menu): ?>
               <nav id="main-menu" role="navigation">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <a id="mobile-site-nav" class="btn btn-info" data-toggle="collapse" data-target=".nav-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
@@ -90,19 +90,19 @@
                 <?php endif;?>
               </nav>
             <?php endif; ?>
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <a id="mobile-site-nav" class="btn btn-navbar visible-phone" data-toggle="collapse" data-target="#site-nav">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
             <?php
-            echo "<div class=\"nav-collapse\">";
+            echo "<div id=\"site-nav\" class=\"nav-collapse\">";
             echo render($page['navigation']);
-            if ($site_slogan):
-              echo "<h2 id=\"site-slogan\">";
-                echo $site_slogan;
-              echo "</h2>";
-            endif;
+              if ($search_block) :
+                echo '<div id="nav-search-bar">';
+                echo $search_block;
+                echo "</div>";
+              endif;
             echo "</div>"; ?>
           </div>
         </div>

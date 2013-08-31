@@ -1,5 +1,5 @@
 name = Infopeople
-description = The Infopeople theme integrates the Twitter Bootstrap framework through the use of the Tweme theme.
+description = The Infopeople theme integrates the Twitter Bootstrap framework through the use of the Tweme theme for Drupal.
 core = 7.x
 base theme  = zenstrap
 

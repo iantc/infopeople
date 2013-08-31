@@ -28,23 +28,17 @@
  */
 ?>
 <div class="<?php print $classes; ?>">
-
-  <?php if ($attachment_before): ?>
-    <div class="attachment attachment-before">
-      <?php print $attachment_before; ?>
-    </div>
-  <?php endif; ?>
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
   <?php endif; ?>
-  <?php print render($title_suffix); ?>
 
+  <?php print render($title_suffix); ?>
   <?php if ($feed_icon): ?>
-    <div class="feed-icon">
-      <?php print $feed_icon; ?>
-    </div>
-  <?php endif; ?>
+  <div class="feed-icon">
+    <?php print $feed_icon; ?>
+  </div>
+<?php endif; ?>
   <?php if ($header): ?>
     <div class="view-header">
       <?php print $header; ?>
@@ -57,6 +51,11 @@
     </div>
   <?php endif; ?>
 
+  <?php if ($attachment_before): ?>
+    <div class="attachment attachment-before">
+      <?php print $attachment_before; ?>
+    </div>
+  <?php endif; ?>
 
   <?php if ($rows): ?>
     <div class="view-content">
@@ -87,6 +86,7 @@
       <?php print $footer; ?>
     </div>
   <?php endif; ?>
+
 
 
 </div><?php /* class view */ ?>

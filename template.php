@@ -72,3 +72,23 @@ function infopeople_menu_local_tasks(&$variables) {
 
   return $output;
 }
+function infopeople_form_user_login_block_alter(&$form, &$form_state) {
+  $pre = '<div id="toboggan-container" class="toboggan-container">';
+  $options = array(
+    'attributes' => array(
+      'id' => 'toboggan-login-link',
+      'class' => array('toboggan-login-link','btn','btn-info'),
+    ),
+    'query' => drupal_get_destination(),
+    'html' => TRUE
+  );
+  $pre .= '<div id="toboggan-login-link-container" class="toboggan-login-link-container">';
+  $pre .= l('<i class="icon-user visible-phone"></i><span class="hidden-phone"> ' . theme('lt_login_link') . "</span>", 'user/login', $options);
+  $pre .= '</div>';
+
+  //the block that will be toggled
+  $pre .= '<div id="toboggan-login" class="user-login-block">';
+
+  $form['pre'] = array('#markup' => $pre, '#weight' => -300);
+  return $form;
+}

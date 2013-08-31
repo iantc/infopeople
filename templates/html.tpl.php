@@ -17,12 +17,9 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-
-  <?php if ($default_mobile_metatags): ?>
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php endif; ?>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,maximum-scale = 1.0">
   <meta http-equiv="cleartype" content="on">
   <?php print $styles; ?>
   <style type="text/css">
@@ -37,7 +34,6 @@
   <script type="text/javascript">
   jQuery(document).ready(function(){
     jQuery('#block-nice-menus-1 ul#nice-menu-1').addClass('nav nav-tabs');
-    jQuery('#toboggan-login-link').addClass('btn btn-info');
     jQuery('#block-system-user-menu .menu').addClass('nav nav-pills');
     jQuery('#block-search-form').addClass('form-search');
     jQuery('#edit-block-search-form--2').addClass('search-query');
@@ -76,7 +72,9 @@
     });
     jQuery('.crm-actions-ribbon .helpicon').addClass('icon-question-sign');
     jQuery('.page-civicrm-event-info .messages.status').prependTo('#crm-event-info-wrapper').show();
-    jQuery()
+    jQuery('.captcha img').addClass('img-polaroid');
+    jQuery('.page-views .feed-icon').prependTo('.page-header');
+    jQuery('.print-page').prepend('<i class="icon-print icon-large"></i> ');
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
