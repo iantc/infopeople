@@ -52,13 +52,13 @@ a:hover{
   padding-left:2%;
 }
 #logo-wrapper{
-  width:49%;
+  width:47%;
 }
 .region-masthead{
   margin-top: 15px;
   float: right;
-  margin-left: .75% !important;
-  width:49% !important;
+  margin-left: 0 !important;
+  width:53% !important;
 }
 .region-navigation{
   position: relative;
@@ -579,7 +579,7 @@ background: #fff;}
   color: #fff;
   text-decoration: none;
   font-weight: normal;
-  padding:3px;
+  padding:0;
 }
 .view .date-nav-wrapper .date-nav {margin: 0}
 .view .date-nav-wrapper .date-prev,.view .date-nav-wrapper .date-next{background-color: transparent;
@@ -606,6 +606,9 @@ margin-right: 10px;}
 }
 
 /* training calendar event labels */
+.views-field-event-type .label{
+  width:84px;
+}
 .views-field-event-type .Online,
 .calendar-calendar .month-view .full td.single-day .inner div.Online,
 .calendar-calendar .week-view .full td .inner div.calendar.weekview div.Online{
@@ -613,23 +616,39 @@ margin-right: 10px;}
   font-weight: normal;
   color:#fff;
   text-shadow:none;
-  padding:3px;
+  padding:10px;
+}
+.view-header .Online{
+  background-color: #178ACC;
 }
 .views-field-event-type .Webinar,
 .calendar-calendar .month-view .full td.single-day .inner div.Webinar,
 .calendar-calendar .week-view .full td .inner div.calendar.weekview div.Webinar{
-  background-color: #F1CEAB !important;
-  color: #DD5600 !important;
+  background-color: #AF82D8 !important;
+  color: #fff !important;
   font-weight: normal;
   text-shadow:none;
-  padding:3px;
+  padding:10px;
 }
-.views-field-event-type .Webinar a,
-.calendar-calendar .month-view .full td.single-day .inner div.Webinar a,
-.calendar-calendar .week-view .full td .inner div.calendar.weekview div.Webinar a{
-  color: #DD5600 !important;
+.view-header .Webinar{
+  background-color: #AF82D8;
+}
+.calendar-calendar .month-view .full td.single-day .inner div.On-Ground,
+.views-field-event-type .On-Ground,
+.calendar-calendar .week-view .full td .inner div.calendar.weekview div.On-Ground{
+  background-color:#F183AF !important;/*ee6e7d*/
+  color: #fff !important;
+  font-weight: normal;
   text-shadow:none;
-  padding:3px;
+  padding:10px;
+}
+.view-header .On-Ground{
+  background-color: #F183AF;
+}
+.views-field-event-type .Online,
+.views-field-event-type .Webinar,
+.views-field-event-type .On-Ground{
+  padding: 5px;
 }
 
 
@@ -647,6 +666,9 @@ margin-right: 10px;}
 .page-civicrm-event .page-header #page-title{
   margin-bottom: 0;
   padding-right: 50px;
+}
+.archive-link{
+  margin: 0 0 10px 10px;
 }
 .subtitle-wrapper{
   margin: 0 10px 15px;
@@ -684,6 +706,9 @@ margin-right: 10px;}
   -moz-box-shadow: none;
   box-shadow: none;
 }
+.crm-section.event_description-section img{
+  max-width: none;
+}
 #event-specifics-wrapper{
   max-width: 600px;
   clear: both;
@@ -694,8 +719,8 @@ margin-right: 10px;}
 .event-instructor{
   padding: 10px 0 20px;
 }
-.event-instructor p{
-  display: inline;
+.event-instructor img{
+  margin-right: 30px!important;
 }
 #crm-container .event-info-wrapper{
   background-color: #8faa6B;
@@ -1148,6 +1173,10 @@ article.node-teaser {
 .view-id-cevent_base .views-field-friendly-date-6{
   clear: both;color:#575757;
 }
+.view-id-cevent_base .views-field-friendly-date-6{
+  float:left;
+  clear: left;
+}
 .view-id-cevent_base .views-field-summary p{
   margin: 0;
 }
@@ -1187,7 +1216,6 @@ form#Register select{
 #profilewrap14 fieldset{margin:0;padding: 0
 }
 #profilewrap14 legend{display: none}
-#profilewrap14 .messages{position: absolute;left:300px;top:5px;margin:0;width: 65%;font-size: 12px}
 #profilewrap14 .messages p{margin: 0}
 #user-register-form .form-item{margin:12px 0 0;position: relative;}
 #edit-field-user-biography{margin-top: 50px}
@@ -1211,15 +1239,18 @@ form#Register select{
 }
 #user-register-form .captcha{
   margin-top: 20px;
-  max-width:550px;
+  max-width:450px;
   background:#f1f1f1;
 }
 #user-register-form .captcha legend{
-  background-color: #f1f1f1;
+  background-color:#c8ecc8;
   padding: 15px 20px 0;
+  max-width: 410px;
+
 }
 #user-register-form .captcha .fieldset-wrapper{
-  padding: 0 20px 15px;
+  padding: 10px 20px 15px;
+  max-width: 410px;
 }
 #user-register-form .captcha img{
   margin: 10px 0;
@@ -1262,7 +1293,11 @@ form#Register select{
 }
 
 
-/* primary tabs */
+/* primary tabs for page options: i.e. edit, view, revisions, etc. */
+#page-options{
+  position: relative;
+  z-index: 100;
+}
 #page-tabs{
   padding: 0
 }
@@ -1362,31 +1397,141 @@ form#Register select{
     padding:0 .3%;
   }
 }
-
-
-/* Landscape phone to portrait tablet */
+@media (max-width: 1174px){
+  #logo-wrapper {
+    width: 30%;
+    float: left;
+  }
+  .region-masthead{width: 68%!important}
+  #tagline{margin: 5px}
+  #logo img{height:48px;}
+  #logo{margin: 10px 5px;clear: both;}
+}
 @media (max-width: 979px) and (min-width: 768px){
+  .btn-navbar {
+    display: none;
+  }
+  .navbar .nav-collapse {
+    clear: none;
+  }
+  .nav-collapse {
+    height: auto;
+    overflow: auto;
+  }
+  .navbar .nav {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+  .navbar .brand {
+    margin-left: -20px;
+    padding: 8px 20px 12px;
+  }
+  .navbar .dropdown-menu:before, .navbar .dropdown-menu:after {
+    display: block;
+  }
+  .navbar .nav > li > a, .navbar .dropdown-menu a {
+    border-radius: 0;
+    color: #999999;
+    font-weight: normal;
+    padding: 10px 8px 8px;
+  }
+  .navbar .nav > li {
+    float: left;
+  }
+  .navbar .dropdown-menu {
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 5px 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    float: left;
+    left: 0;
+    list-style: none outside none;
+    margin: 0;
+    min-width: 160px;
+    padding: 4px 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+  }
+  .navbar-form, .navbar-search {
+    border:none;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
+    float: left;
+    margin-bottom: 0;
+    margin-top:6px;
+    padding: 9px 15px;
+  }
+
+  .navbar .nav.pull-right {
+    float: right;
+    margin-left: auto;
+  }
+  .nav-collapse, .nav-collapse.collapse {
+    overflow: visible;
+    height: auto;
+  }
+  .navbar .btn-navbar {
+    display: none;
+  }
+  #social-csusm-wrapper{
+    width: auto;
+  }
+  #social-csusm-wrapper #get-social{
+    margin: 0;
+    width:100px;
+    float: right;
+  }
+  #social-csusm-wrapper #csusm-menu{
+    margin: 0;
+    width: 90px;
+    float: right;
+  }
+  #main-menu{
+    margin-left: 0;
+  }
   .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
     width: auto;
   }
-  #tagline{margin: 5px}
-  .region-masthead{width: 43%!important}
+}
+
+@media (max-width: 870px) and (min-width: 768px){
+  #block-search-form {
+    clear: both;
+    margin-top: 10px;
+    margin-right: -26px;
+  }
 }
 @media (max-width: 767px) {
-  body{font-size: 13px}
-  #logo img{height:48px;}
-  #logo{margin: 10px 5px;clear: both;}
-.view-id-cevent_base .item-list ul{min-width: 200px;}
-  #navbar #block-user-login {margin-bottom: 0}
-  #navbar #block-nice-menus-1 .nav {margin: 0}
-  .region-masthead {margin: 5px;float: none;}
-  .region-navigation {float: none;}
-  #block-search-form {float: left;}
-  #edit-search-block-form--2 {width: auto;min-width: 145px;}
-  .region-masthead .block-service-links{display: none;}
-}
-/* Landscape phones and down */
-@media only screen and (max-width: 640px){
+  body{
+    font-size: 13px
+  }
+  .view-id-cevent_base .item-list ul{
+    min-width: 200px;
+  }
+  #navbar #block-user-login {
+    margin-bottom: 0
+  }
+  #navbar #block-nice-menus-1 .nav {
+    margin: 0
+  }
+  .region-masthead {
+    margin: 5px;float: none;
+  }
+  .region-navigation {
+    float: none;
+  }
+  #block-search-form {
+    float: left;
+  }
+  #edit-search-block-form--2 {
+    width: auto;min-width: 145px;
+  }
+  .region-masthead .block-service-links{
+    display: none;}
   #navbar .navbar-inner{
     padding: 0;
     height: 44px;
@@ -1396,8 +1541,19 @@ form#Register select{
     background: #fff;
     width: 100%;
     z-index: 100;
-    margin-top: 4px;
+    margin-top: 54px;
     background-color: #f2f2f2;
+  }
+  ul.nice-menu li.menuparent ul, #header-region ul.nice-menu li.menuparent ul {
+    display: block !important;
+    visibility: visible !important;
+    border: none;
+  }
+  ul.nice-menu ul.dropdown-menu li {
+    float: none;
+  }
+  ul.nice-menu-down .menuparent a {
+    color: #555;
   }
   #block-search-form form {
     margin: 0}
@@ -1423,7 +1579,10 @@ form#Register select{
   #block-search-form {
     position: absolute;
     top: 1px;
-    right: -3px;
+    right: 6px;
+  }
+  .not-logged-in #block-search-form{
+    right: 44px;
   }
   #toboggan-container{
     text-align: left;
@@ -1433,29 +1592,39 @@ form#Register select{
     text-align: left;
   }
   #block-user-login .btn{
-    padding: 3px 4px 1px;
+    padding: 2px 4px 0;
     font-size: 12px;
-    text-align: center;;
+    text-align: center;
+    height: 32px;
+    overflow: hidden;
   }
   #block-user-login .btn .icon-user{
-    padding:5px !important;
-    font-size: 20px;
+    padding:4px !important;
+    font-size: 22px;
     color:#efefef;
   }
   #mobile-site-nav{
     position: absolute;
     top:4px;
     left:auto;
-    right: 95px;
+    right: 53px;
     margin:0;
     padding:8px 7px;
+    height: 18px;
+    overflow: hidden;
+  }
+  .not-logged-in #mobile-site-nav{
+    right:104px;
   }
   #mobile-site-search{
-    padding: 7px 2px 6px;
+    padding: 6px 8px 4px;
     float: right;
   }
   #mobile-site-search .icon-search{
-    font-size:18px;
+    font-size:20px;
+    padding: 6px 1px !important;
+    height: 25px;
+    overflow: hidden;
   }
   #search-collapse{
     background-color: #FFF;
@@ -1464,7 +1633,7 @@ form#Register select{
   }
   #search-collapse .form-item {
     display: block;
-    padding: 20px 0 20px 20px;
+    padding: 20px 0 20px 10px;
     background: #f2f2f2;
     margin:0;
   }
@@ -1499,7 +1668,7 @@ form#Register select{
   #navbar #block-user-login{
     position: absolute;
     top: 4px;
-    right:52px;
+    right:6px;
     z-index: 100;
   }
   .navbar .btn-navbar .icon-bar {
