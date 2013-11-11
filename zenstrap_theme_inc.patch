@@ -1,0 +1,11 @@
+--- C:\Users\ianc\Downloads\zenstrap\includes\theme.inc 2013-06-25 00:49:34.000000000 -0800
++++ C:\Users\ianc\Sites\infopeople\sites\all\themes\zenstrap\includes\theme.inc*  2013-11-09 18:02:25.099000000 -0800
+@@ -283,7 +283,7 @@
+            
+         }
+         // Pass in $link as $options, they share the same keys.
+-        $output .= l($link['title'], $link['href'], $link);
++        $output .= l($link['title'], $link['href'], array('attributes' => array('id' => $link['id'], 'class' => array($link['attributes']['class'])), 'html' => true));
+       }
+       elseif (!empty($link['title'])) {
+         // Some links are actually not links, but we wrap these in <span> for adding title and class attributes.

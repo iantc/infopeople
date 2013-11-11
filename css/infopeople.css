@@ -201,7 +201,7 @@ ul.nice-menu-down li,.nav-tabs > li {
   color:#565656!important;
   border-radius:3px 3px 0 0;
   border: none;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   margin-bottom: 0;
   -moz-border-radius:3px 3px 0 0;
   -webkit-border-radius:3px 3px 0 0;
@@ -487,8 +487,8 @@ div.messages ul{
 #mainTabContainer li.ui-state-active {
   background-color: #888;
 }
-#mainTabContainer li.ui-state-active a{
-  color: #fff;
+#mainTabContainer li.ui-state-active a:link{
+  color: #fff!important;
 }
 #crm-container a.button,
 #crm-participant-link,
@@ -710,7 +710,7 @@ margin-right: 10px;}
   max-width: none;
 }
 #event-specifics-wrapper{
-  max-width: 600px;
+  max-width: 750px;
   clear: both;
 }
 #crm-container fieldset {
@@ -726,6 +726,7 @@ margin-right: 10px;}
   background-color: #8faa6B;
   border: 1px solid #cdcdcd;
   border-radius: 5px;
+  max-width: 600px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   margin-bottom: 10px;
@@ -791,7 +792,7 @@ margin-right: 10px;}
 .crm-event-manage-tab-actions-ribbon{
   float: right;
   font-size: 15px;
-  margin: -50px 0 0 !important;
+  margin: -50px 30px 0 0 !important;
 }
 #crm-container .crm-event-manage-tab-actions-ribbon #actions{
 }
@@ -824,6 +825,13 @@ margin-right: 10px;}
 }
 .crm-section{
   padding:0;
+}
+.crm-event-manage-registration-form-block-confirm_email_text{
+  vertical-align: top;
+}
+#confirm_email_text{
+  width:99%;
+  min-height: 400px;
 }
 #crm-container div#printer-friendly {
   margin:-55px 5px 0 0;
@@ -886,9 +894,9 @@ margin-right: 10px;}
 }
 .event_date_time-section{
   position: relative;
+  max-width: 600px;
 }
 .ical-links-top{
-  margin-right: -18px;
   position: absolute;
   right: 0;
   top:0;
@@ -897,6 +905,9 @@ margin-right: 10px;}
   font-size: 24px;
   float: left;
   margin: -12px 0 20px 50px;
+}
+#ThankYou .iCal_links-section{
+  margin:5px 0;
 }
 #crm-container .ical-links-top .iCal_links-section{
   margin:0;

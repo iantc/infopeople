@@ -7,6 +7,10 @@
  */
 
 ?>
+<?php if (isset($_GET['modal']) && $_GET['modal']): ?>
+  <?php print $page; ?>
+  <?php print $scripts; ?>
+<?php else: ?>
 <!DOCTYPE html>
 <!--[if IEMobile 7]><html class="iem7" <?php print $html_attributes; ?>><![endif]-->
 <!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7" <?php print $html_attributes; ?>><![endif]-->
@@ -75,6 +79,11 @@
     jQuery('.captcha img').addClass('img-polaroid');
     jQuery('.page-views .feed-icon').prependTo('.page-header');
     jQuery('.print-page').prepend('<i class="icon-print icon-large"></i> ');
+    jQuery('.field-name-field-bio-pic img').addClass('img-polaroid');
+    if (jQuery('#archive-link').length){
+      jQuery('body').addClass('one-sidebar sidebar-first').removeClass('two-sidebars');
+      jQuery('.login-req-notice').hide();
+    }
   });
   </script>  <?php if ($add_respond_js): ?>
     <!--[if lt IE 9]>
@@ -97,3 +106,4 @@
   <?php print $page_bottom; ?>
 </body>
 </html>
+<?php endif; ?>
