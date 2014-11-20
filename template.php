@@ -44,12 +44,16 @@ if (theme_get_setting('infopeople_rebuild_registry') && !defined('MAINTENANCE_MO
 
 function infopeople_menu_local_tasks(&$variables) {
   $output = '';
-
+//  $wherearewe = $variables['primary']['0']['#link']['page_callback'];
   if (!empty($variables['primary'])) {
-    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] = '<div class="btn-group pull-right" id="page-options"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Page Options<span class="caret"></span></a>';
-    $variables['primary']['#prefix'] .= '<ul class="dropdown-menu" id="page-tabs">';
-    $variables['primary']['#suffix'] = '</ul></div>';
+    if (!strstr($wherearewe,"user_view_page") && !strstr($variables['primary'][0]['#link']['path'],"user/")) { // we are on a user's page...
+      $variables['primary']['#prefix'] = '<div class="btn-group pull-right" id="page-options"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Page Options<span class="caret"></span></a>';
+      $variables['primary']['#prefix'] .= '<ul class="dropdown-menu" id="page-tabs">';
+      $variables['primary']['#suffix'] = '</ul></div>';
+    } else { 
+      $variables['primary']['#prefix'] .= '<ul class="nav nav-pills" id="page-tabs">';
+      $variables['primary']['#suffix'] = '</ul>';
+    }
     $output .= drupal_render($variables['primary']);
   }
 

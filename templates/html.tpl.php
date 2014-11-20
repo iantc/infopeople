@@ -61,8 +61,9 @@
     jQuery('#page-tabs li a[href$="/edit"]').prepend('<i class="icon-edit"></i>  ');
     jQuery('#page-tabs li a:contains("View")').prepend('<i class="icon-eye-open"></i>  ');
     jQuery('#page-tabs li a:contains("Devel")').prepend('<i class="icon-beaker"></i>  ');
+    jQuery('#page-tabs li a:contains("export")').prepend('<i class="icon-download-alt"></i>  ');
     jQuery('#page-tabs li a:contains("Track")').prepend('<i class="icon-signal"></i>  ');
-    jQuery('#page-tabs li a:contains("Log")').prepend('<i class="icon-filter"></i>  ');
+    jQuery('.logged-in #page-tabs li a:contains("Log")').prepend('<i class="icon-filter"></i>  ');
     jQuery('#printer-friendly .ui-icon-print').addClass('icon-print').removeClass('ui-icon ui-icon-print');
     jQuery('#crm-submit-buttons .crm-button').removeClass('crm-button');
     jQuery('#crm-submit-buttons .form-submit').addClass('btn btn-info').removeClass('form-submit');

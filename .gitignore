@@ -36,3 +36,6 @@ xmlrpc.php
 /scripts
 /themes
 .DS_Store
+images/._
+images/._*
+Thumbs.db

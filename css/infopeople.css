@@ -255,6 +255,8 @@ ul.nice-menu-down li.menuparent:hover {background: none;}
 /* slideshow */
 #block-views-front-slideshow-block{
   margin: 16px 0 0;
+  position: relative;
+  z-index: 1;
 }
 #block-views-front-slideshow-block img{
   margin:0 auto;
@@ -670,6 +672,10 @@ margin-right: 10px;}
 .archive-link{
   margin: 0 0 10px 10px;
 }
+.crm-container .archive-link a{
+  font-weight: bold;
+  color: #fff;
+}
 .subtitle-wrapper{
   margin: 0 10px 15px;
 }
@@ -1080,8 +1086,73 @@ margin-right: 10px;}
   padding:0;
 }
 
-
-
+/* scholarship form */
+.crm-contribution-page-id-1 #priceset .contribution_amount-section .field-label.span3{
+  display: none;
+}
+.crm-contribution-page-id-1 #priceset .other_amount-section .field-label{
+  float: left;
+  margin-right: 10px;
+  display: none;
+}
+#crm-container .crm-contribution-page-id-1 .crm-section .other_amount-content{
+  margin-left: 23px;
+}
+#crm-container .crm-contribution-page-id-1 .crm-section div.content{
+  padding: 0;
+}
+#crm-container .crm-contribution-page-id-1 .email-5-section{
+  clear: both;
+  margin-top: 15px;
+  float: left;
+  width: 100%;
+  margin-left: 2px;
+  margin-bottom: 15px;
+}
+#crm-container .crm-contribution-page-id-1 .email-5-section .label{
+  float: none;
+}
+#crm-container .crm-contribution-page-id-1 .email-5-section label{
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 32px;
+}
+#crm-container .crm-contribution-page-id-1 .crm-section .label{
+  color: #333;
+  text-align: left;
+  padding-left: 0;
+}
+#crm-container .crm-contribution-page-id-1 .payment_processor-section .label{
+  padding-top: 0;
+}
+#crm-container .crm-contribution-page-id-1 .payment_processor-section .content label{
+  padding-right: 19px;
+}
+.custom_pre_profile-group .span3{
+  width:17%;
+}
+#crm-container .crm-contribution-page-id-1 #credit_card_type{
+  width:125px;
+}
+#crm-container .crm-contribution-page-id-1 #credit_card_number{
+  width: 215px;
+}
+#crm-container .crm-contribution-page-id-1 #cvv2{
+  width: 50px;
+}
+#crm-container .crm-contribution-page-id-1 #credit_card_exp_date_M{
+  width: 90px;
+}
+#crm-container .crm-contribution-page-id-1 #credit_card_exp_date_Y{
+  width:100px;
+}
+.crm-contribution-page-id-1 #billingcheckbox{
+  margin: 0 5px 0 12px;
+}
+#crm-container .crm-contribution-page-id-1 #crm-submit-buttons input#_qf_Main_upload-bottom {
+font-size: 15px;
+padding: 4px 12px;
+}
 
 /* book navigation */
 .book-nav-horizontal .well{margin:10px 30px 40px;float: left;}
@@ -1366,6 +1437,14 @@ form#Register select{
   padding:0.3em 0;
 }
 
+/* CiviCRM nav menu */
+#civicrm-menu{
+  display: none;
+}
+.logged-in.editor #civicrm-menu,
+.logged-in.admin-menu #civicrm-menu{
+  display: block;
+}
 
 /* blogs theming */
 .field-name-field-blog-tags,.field-name-field-blog-categories {
